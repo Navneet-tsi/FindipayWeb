@@ -590,7 +590,7 @@ section {
     letter-spacing: .1vh;
     font-weight: 600;
     text-align: center;
-    margin-top: 4%;
+    margin-top: 8%;
     font-size: 100%;
 }
 
@@ -1137,7 +1137,7 @@ h1 {
   padding: 12px 15px;
 }
 
-.contact-main .php-email-form button[type="submit"] {
+.contact-main .php-email-form button[type="button"] {
   background: #029eba;
   border: 0;
   padding: 10px 30px;
@@ -2556,4 +2556,9 @@ th {
     max-width: 100%;
     margin-top: 8%;
     /* max-height: 70px; */
+  }
+  .error{
+    font-size: 14px;
+    color: red;
+    margin-left: 10px;
   }
