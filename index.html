@@ -1,2308 +1,1629 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Findipay</title>
-  <meta content="" name="description">
-
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <!-- Google Fonts -->
-  <link rel="stylesheet"
-    href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/compiled-4.20.0.min.css">
-
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/boo/tstrap/3.4.1/js/bootstrap.min.js"></script>
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-
-
-  <!-- <link rel="stylesheet" href="style/animate.css" type="text/css"> -->
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <!-- =======================================================
-  * Template Name: Findipay-v1.12.0
-  * Template URL: https://Findipaywebsite/
-  * Author: Nav.com
-  * License: https://
-  ======================================================== -->
-  <style>
-    .test {
-      min-height: 200px;
-      background-color: red;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
-
-    <div class="col-12 text-center xyz"> <span><i class="bi bi-clock"></i> Open Hours: 8 AM to 10
-        PM (Mon-Sat)</span> <a class="" style="margin-left:15px;"><i class="bi bi-envelope"></i>
-        contact@findipay.in</a> <span style="margin-left: 15px;"> <i class="bi bi-telephone"></i> 1800-121-447777</div>
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between" style="margin-top: 2%;">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/images/FindiPay Logo_TEAL.jpg" alt="">
-      </a>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
-          <li><a class="nav-link scrollto" href="#about">ABOUT US</a></li>
-          <li><a class="nav-link scrollto" href="#services">SERVICES</a> </li>
-          <li><a class="nav-link scrollto" href="#section_why">WHY US</a></li>
-          <li><a class="nav-link scrollto" href="#contact-main">CONTACT</a></li>
-
-          <!-- <li><a class="getstarted scrollto" href="Auth/DashBoard.html">LOG IN</a></li> -->
-          <a class="getstarted scrollto animated-button" data-toggle="modal" data-target="#fluidModalRightSuccessDemo"
-            style="color: white;">LOG IN</a>
-          <div class="modal fade right" id="fluidModalRightSuccessDemo" tabindex="-1" role="dialog"
-            aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
-            <div class="modal-dialog modal-full-height modal-right modal-notify modal-success" role="document">
-              <!--Content-->
-              <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-                  style=" margin-top: 4%;margin-left:90%;"><span aria-hidden="true">&times;</span></button>
-                <!--Header-->
-                <div class="modal-header" style="background-color: white; box-shadow: none;">
-                </div>
-                <!--Body-->
-                <div class="modal-body" id="formLogin">
-                  <div class="text-center">
-
-                    <h2 style="margin-top: -20%; color:black; ">Welcome back!</h2>
-                    <p style="color: black; font-size: medium;font-weight: 500;"> Securely login your findipay account
-                    </p>
-                  </div>
-                  <!-- <label data-error="wrong" data-success="right" for="form3">Your name</label> -->
-                  <div class="form-group">
-                    <input type="text" id="mobileEmail" class="form-control validate modelinput"
-                      placeholder="Mobile number/Email ID" style="margin-top: 10%;height:50px;"
-                      onkeypress="return validateNumber(event)">
-                    <div class="error" id="mobileEmailError"></div>
-                  </div>
-                  <!-- <label data-error="wrong" data-success="right" for="form3">Your name</label> -->
-                  <div class="form-group">
-                    <input type="password" id="password" class="form-control validate modelinput" placeholder="Password"
-                      style="margin-top: -1%;height: 50px;">
-                    <div class="error" id="passwordError"></div>
-                  </div>
-                  <!-- <a style="margin-top: 5%;" href="">Forgot password?</a> -->
-                  <div class="row mb-4">
-                    <div class="col-md-6 d-flex justify-content-center">
-                      <!-- Checkbox -->
-                      <!-- <div class="form-check mb-0 mb-md-0" > -->
-                      <div>
-                        <input class="form-check-input" type="checkbox" value="" id="loginCheck" />
-                        <label class="form-check-label" for="loginCheck" style="margin-top:10%;"> Remember me </label>
-                      </div>
-                    </div>
-
-                    <div class="col-md-6  justify-content-center">
-                      <!-- Simple link -->
-                      <a data-toggle="modal" data-target="#forgetPasswordModal" style="color:#0FA4C4">Forgot
-                        password?</a>
-                    </div>
-                    <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"
-                      style="margin-left: 10%;"></div>
-                    <div class="justify-content-center">
-                      <button type="button" class="animated-button" id="btnLogin"
-                        style=" background-color:#0FA4C4;
-                        width: 60%; height: 50px;margin-top:10% ; color:white; font-size: large; font-weight: bold; margin-left: 25%; border-radius: 5px;"
-                        onclick="ValidateMobile(mailmob)"> <span style="display: block;
-                          padding-top: px;
-                          text-align: center;
-                          line-height: 1em;">Proceed</span></a></button>
-                    </div>
-                    <!-- <a style="text-align: center; padding-left: 35%; color: #0FA4C4;" href="">Request a callback</a> -->
-
-                  </div>
-
-                  <!-- <p class="text-center modal-footer"></p> -->
-
-                  <div class="text-center">
-                    <p>Don't have an account?</p>
-                    <a id="sign-up" href="#contact-main " style="margin-top: -8%; margin-left: 35%; color:#0FA4C4;">
-                      Sign-up</a>
-
-                  </div>
-                  <p style="font-size: 12px;margin-left:14%; margin-top: 15%;">By Signing up, I accept Findipay<a
-                      style="margin-top:-9%; margin-left: 44%; color:#0FA4C4;font-size: 12px;">Terms & Condition</a></p>
-
-
-
-                </div>
-
-                <!--Footer-->
-                <!-- <div class="modal-footer justify-content-center">
-                    <a type="button" class="btn btn-success">
-                        Get it now
-                        <i class="far fa-gem ml-1"></i>
-                    </a>b
-                    <a  class="btn btn-outline-success waves-effect" data-dismiss="modal">No, thanks</a>
-                </div> -->
-              </div>
-              <!--/.Content-->
-            </div>
-          </div>
-          <button type="button" class="btn btn Us" id="joinUs" click="joinUsNow()"
-            style="height:41px; background-color:white; font-weight: 500; margin-left:15px;border-color:black; box-shadow: none;">
-            SIGN UP
-          </button>
-
-        </ul>
-
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- crousal -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <section id="hero" class="hero align-items-center">
-          <div class="container">
-            <div class="row">
-              <div style="padding:3%; color: white; font-weight: 600;"
-                class="col-lg-7 flex-column justify-content-center main-head">
-                <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
-                <h1 style="font-size: 40px; text-align: left;"><span style="color: #0FA4C4;">ONE</span> PLATFORM
-                  <br><span style="color: #E31E24;">ENDLESS</span> SERVICES
-                </h1>
-                <div class="row mt-5">
-                  <p>Explore a wide variety of services such as Domestic Money Transfer,
-                    Indo Nepal Transfer, AePS Cash Withdrawal, Bill Paymaents, Travel & so much more!
-                  </p>
-                </div>
-                <div class="row">
-                  <div class="input-box">
-                    <span class="prefix">+91-</span>
-                    <input type="number" placeholder="0000000000" onkeypress="return validateNumber(event)" required />
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="text-lg-start mt-3">
-                    <button
-                      class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center animated-button Us">
-                      <span style="color:#0a0a0a">Request a Callback</span>
-
-                    </button>
-
-                  </div>
-                </div>
-                <!-- <div class="row">
-              <img class="in" src="./assets/images/facebook.png">
-              <img class="in" src="./assets/images/facebook.png">
-            </div> -->
-
-              </div>
-
-              <div class="col-lg-5 hero-img">
-                <!-- <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-1 mt-2">
-                <img src="assets/images/b.png" class="img-fluid img-peace-b" alt="">
-              </div>
-            </div> -->
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="assets/images/Bannner1.png" data-aos="zoom-out" data-aos-delay="200" class="img-fluid"
-                      alt="">
-
-                  </div>
-                </div>
-                <!-- <div class="row">
-              <div class="col-md-10"></div>
-              <div class="col-md-1" style="margin-top: -60px;z-index: 1;">
-                <img src="assets/images/r.png" class="img-fluid img-peac-r" alt="">
-              </div>
-            </div> -->
-              </div>
-
-
-            </div>
-          </div>
-        </section><!-- End Hero -->
-      </div>
-      <div class="carousel-item">
-        <section id="hero" class="hero align-items-center">
-
-          <div class="container">
-            <div class="row">
-              <div style="padding:3%; color: white;" class="col-lg-7 flex-column justify-content-center main-head">
-                <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
-                <h1 style="font-size: 40px; text-align: left; font-weight: bold ;line-height: 1.6;"><span
-                    style="color: #FF671F;">भा</span>र<span style="color: #046A38;">त</span> के Digital<br> Parivartan
-                  की इस<br> यात्रा में हमारे साथ<br> शामिल हो
-
-                  <div class="row mt-5">
-                    <p style="font-size: 25px;">आज ही <img src="./assets/images/FindiPay Logo_REVERSE.png" width="25%">
-                      के साथ जुड़े </p>
-                  </div>
-                  <!-- <div class="row">
-            <div class="input-box">
-              <span class="prefix">+91-</span>
-              <input type="number" maxlength="10" placeholder="0000000000" />
-            </div>
-          </div> -->
-                  <!-- <div class="row">
-            <div class="text-lg-start mt-3">
-              <button
-                class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center animated-button">
-                <span style="color:#0a0a0a">Request a Callback</span>
-
-              </button> -->
-
-
-
-                  <!-- <div class="row">
-          <img class="in" src="./assets/images/facebook.png">
-          <img class="in" src="./assets/images/facebook.png">
-        </div> -->
-
-              </div>
-
-              <div class="col-lg-5 hero-img">
-                <!-- <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-1 mt-2">
-            <img src="assets/images/b.png" class="img-fluid img-peace-b" alt="">
-          </div>
-        </div> -->
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="./assets/images/Bannner2.png" data-aos="zoom-out" data-aos-delay="200" class="hand-imm"
-                      alt="">
-
-                  </div>
-                </div>
-                <!-- <div class="row">
-          <div class="col-md-10"></div>
-          <div class="col-md-1" style="margin-top: -60px;z-index: 1;">
-            <img src="assets/images/r.png" class="img-fluid img-peac-r" alt="">
-          </div>
-        </div> -->
-              </div>
-
-        </section><!-- End Hero -->
-
-      </div>
-      <div class="carousel-item">
-        <section id="hero" class="hero align-items-center">
-
-          <div class="container">
-            <div class="row">
-              <div style="padding:3%; color: white; font-weight: 600;"
-                class="col-lg-7 flex-column justify-content-center main-head">
-                <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
-                <h1 style="font-size: 40px; text-align: left;"><span style="color: #0FA4C4;">ANYTIME
-                    ANYWHERE</span><span> <br>MONEY TRANSFER<br> & WITHDRAWALS</h1>
-                <br />
-
-                <div class="row mt-1">
-                  <p style="margin-top: -5%;">whether you need to send money home or need cash, have no fear
-                    when Findipay is hear! Enjoy a hassle-free experience when you send money through
-                    our Domestic Money Transfer & Indo-Nepal Transfer services or AePS cash withrawal service.
-
-                  </p>
-                </div>
-                <div class="row">
-                  <!-- <div class="input-box">
-                  <span class="prefix">+91-</span>
-                  <input type="number" maxlength="10" placeholder="0000000000" />
-
-                </div> -->
-                  <img class="inn" src="./assets/images/DMT (6).png">
-                  <img class="inn" src="./assets/images/INMT (3).png">
-                  <img class="inn" src="./assets/images/AePS (7).png">
-                </div>
-                <!-- <h5 style="margin-left: 80%; margin-top: 3%;">And more!</h5> -->
-                <!-- <div class="row">
-                <div class="text-lg-start mt-3">
-                  <button
-                    class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center animated-button">
-                    <span style="color:#0a0a0a">Request a Callback</span>
-
-                  </button>
-
-                </div>
-              </div> -->
-                <!-- <div class="row">
-              <img class="in" src="./assets/images/facebook.png">
-              <img class="in" src="./assets/images/facebook.png">
-            </div> -->
-
-              </div>
-
-              <div class="col-lg-5 hero-img">
-                <!-- <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-1 mt-2">
-                <img src="assets/images/b.png" class="img-fluid img-peace-b" alt="">
-              </div>
-            </div> -->
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="assets/images/Bannner3.png" data-aos="zoom-out" data-aos-delay="200" class="map-in"
-                      alt="">
-
-                  </div>
-                </div>
-                <!-- <div class="row">
-              <div class="col-md-10"></div>
-              <div class="col-md-1" style="margin-top: -60px;z-index: 1;">
-                <img src="assets/images/r.png" class="img-fluid img-peac-r" alt="">
-              </div>
-            </div> -->
-              </div>
-
-
-            </div>
-          </div>
-        </section><!-- End Hero -->
-
-
-      </div>
-      <div class="carousel-item">
-        <section id="hero" class="hero align-items-center">
-
-          <div class="container">
-            <div class="row">
-              <div style="padding:3%; color: white; font-weight: 600;"
-                class="col-lg-7 flex-column justify-content-center main-head">
-                <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
-                <h1 style="font-size: 40px; text-align: left;"><span style="color: #0FA4C4;">STRESS
-                    FREE</span><span><br>HOLIDAY BOOKINGS</h1>
-                <br />
-
-                <div class="row mt-3">
-                  <p style="margin-top: -5%;">Let's keep holidays fun and exicting! Findipay has all your Travel
-                    need under one roof. Provide hassle free and easy travel booking with our
-                    Flight, Train and Hotel Booking services.
-
-                  </p>
-                </div>
-                <div class="row">
-                  <!-- <div class="input-box">
-              <span class="prefix">+91-</span>
-              <input type="number" maxlength="10" placeholder="0000000000" />
-
-            </div> -->
-                  <img class="inn" src="./assets/images/Flight (3).png">
-                  <img class="inn" src="./assets/images/IRCTC (1).png">
-                  <img class="inn" src="./assets/images/Hotel (2).png">
-                </div>
-                <!-- <h5 style="margin-left: 80%; margin-top: 3%;">And more!</h5> -->
-                <!-- <div class="row">
-            <div class="text-lg-start mt-3">
-              <button
-                class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center animated-button">
-                <span style="color:#0a0a0a">Request a Callback</span>
-
-              </button>
-
-            </div>
-          </div> -->
-                <!-- <div class="row">
-          <img class="in" src="./assets/images/facebook.png">
-          <img class="in" src="./assets/images/facebook.png">
-        </div> -->
-
-              </div>
-
-              <div class="col-lg-5 hero-img">
-                <!-- <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-1 mt-2">
-            <img src="assets/images/b.png" class="img-fluid img-peace-b" alt="">
-          </div>
-        </div> -->
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="assets/images/Bannner4.png" data-aos="zoom-out" data-aos-delay="200" class="img-map-in"
-                      alt="">
-
-                  </div>
-                </div>
-                <!-- <div class="row">
-          <div class="col-md-10"></div>
-          <div class="col-md-1" style="margin-top: -60px;z-index: 1;">
-            <img src="assets/images/r.png" class="img-fluid img-peac-r" alt="">
-          </div>
-        </div> -->
-              </div>
-
-
-            </div>
-          </div>
-        </section><!-- End Hero -->
-
-      </div>
-      <div class="carousel-item">
-
-        <section id="hero" class="hero align-items-center">
-
-          <div class="container">
-            <div class="row">
-              <div style="padding:3%; color: white; font-weight: 600;"
-                class="col-lg-7 flex-column justify-content-center main-head">
-                <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
-                <h1 style="font-size: 40px; text-align: left;"><span style="color: #0FA4C4;">NEVER MISS </span><span> A
-                    <br>BILL PAYMENT</h1>
-                <br />
-
-                <div class="row mt-1">
-                  <p style="margin-top: -5%;">Say bye bye to late bill payments! Enjoy the convenience of paying all
-                    your utility bills
-                    on time with Findipay. No more stress of last date, long queues, and late fines when paying your
-                    bills through
-                    Findipay with our Bharat Bill pay Services.
-                  </p>
-                </div>
-                <div class="row">
-                  <!-- <div class="input-box">
-                  <span class="prefix">+91-</span>
-                  <input type="number" maxlength="10" placeholder="0000000000" />
-
-                </div> -->
-                  <img class="inn" src="./assets/images/Electricity (1).png">
-                  <img class="inn" src="./assets/images/LPG (1).png">
-                  <img class="inn" src="./assets/images/Water (1).png">
-                </div>
-                <!-- <h5 style="margin-left: 45%; margin-top: 1%;">And more!</h5> -->
-                <!-- <div class="row">
-                <div class="text-lg-start mt-3">
-                  <button
-                    class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center animated-button">
-                    <span style="color:#0a0a0a">Request a Callback</span>
-
-                  </button>
-
-                </div>
-              </div> -->
-                <!-- <div class="row">
-              <img class="in" src="./assets/images/facebook.png">
-              <img class="in" src="./assets/images/facebook.png">
-            </div> -->
-
-              </div>
-
-              <div class="col-lg-5 hero-img">
-                <!-- <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-1 mt-2">
-                <img src="assets/images/b.png" class="img-fluid img-peace-b" alt="">
-              </div>
-            </div> -->
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="assets/images/Bannner5.png" data-aos="zoom-out" data-aos-delay="200" class="img-billpay"
-                      alt="">
-
-                  </div>
-                </div>
-                <!-- <div class="row">
-              <div class="col-md-10"></div>
-              <div class="col-md-1" style="margin-top: -60px;z-index: 1;">
-                <img src="assets/images/r.png" class="img-fluid img-peac-r" alt="">
-              </div>
-            </div> -->
-              </div>
-
-
-            </div>
-          </div>
-        </section><!-- End Hero -->
-
-      </div>
-      <div class="carousel-item">
-        <section id="hero" class="hero align-items-center">
-
-          <div class="container">
-            <div class="row">
-              <div style="padding:3%; color: white; font-weight: 600;"
-                class="col-lg-7 flex-column justify-content-center main-head">
-                <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
-                <h1 style="font-size: 40px; text-align: left;"><span>BUILDING A NEW <br>DIGITAL </span><span
-                    style="color:  #FF671F;">IN</span>DI<span style="color: #046A38;">A</span></h1>
-
-
-                <div class="row mt-5">
-                  <p>Boost your digital business with zero investment! Offer a wide
-                    variety of services to your customers, gain new customers & increase your footfall, build
-                    loyalty within your communinty,and become the one stop shop for all
-                    your customer needs while earning commission!
-                  </p>
-                </div>
-                <div class="row">
-                  <!-- <div class="input-box">
-              <span class="prefix">+91-</span>
-              <input type="number" maxlength="10" placeholder="0000000000" />
-            </div> -->
-                  <div id="container" style="white-space:nowrap;">
-
-                    <div id="texts"
-                      style="display:inline; white-space:nowrap; font-size: 18px; font-weight: 400;color:#f9f9ff">
-                      Be a part of the new #digitalIndia with
-                    </div>
-                    <div id="image" style="display:inline;    margin-left: 2%;">
-                      <img src="./assets/images/FindiPay Logo_REVERSE.png" width="15%" style="margin-top: 2%;">
-                    </div>
-                    <!-- <div> <span> WHY</span> <img src="assets/images/FindiPay Logo_TEAL.jpg" alt=""
-            width="200px" style="margin-top: -1.4%;margin-left: 1%;"></span>
-          </div> -->
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="text-lg-start mt-3">
-                    <!-- <button
-                      class="Download-our-App d-inline-flex align-items-center justify-content-center align-self-center animated-button">
-                      <span style="color:#0a0a0a">Download our App and join us Today!</span>
-                       
-                    </button> -->
-                    <img src="./assets/images/Get it on Playstore.png" width="30%">
-
-                  </div>
-                </div>
-                <!-- <div class="row">
-          <img class="in" src="./assets/images/facebook.png">
-          <img class="in" src="./assets/images/facebook.png">
-        </div> -->
-
-              </div>
-
-              <div class="col-lg-5 hero-img">
-                <!-- <div class="row">
-          <div class="col-md-3"></div>
-          <div class="col-md-1 mt-2">
-            <img src="assets/images/b.png" class="img-fluid img-peace-b" alt="">
-          </div>
-        </div> -->
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="assets/images/Bannner6.png" data-aos="zoom-out" data-aos-delay="200"
-                      class="img-map-in" alt="">
-
-                  </div>
-                </div>
-                <!-- <div class="row">
-          <div class="col-md-10"></div>
-          <div class="col-md-1" style="margin-top: -60px;z-index: 1;">
-            <img src="assets/images/r.png" class="img-fluid img-peac-r" alt="">
-          </div>
-        </div> -->
-              </div>
-
-
-            </div>
-          </div>
-        </section><!-- End Hero -->
-
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- crousal end -->
-
-  <!---How it works-->
-  <section id="about" style="margin-top: -4%;" >
-    <section class="values" style="background-color:white;margin-top: -4%;">
-
-      <div class="container" data-aos="fade-up">
-  
-        <header class="section-header text-center">
-          <div class="col-md-12">
-            <div class="row">
-              <h1 class="top-title" style="font-size: 40px; color: #02A8C6; ;">ABOUT US</h1>
-              <!-- <H1 style="margin-top: 20px;">Who we are, What we do.</H1> -->
-              <p class="mt-2 text-center" style=" padding-left: 8%;
-                padding-right: 8%; padding-top: 2%;">
-                FindiPay is a fast and secure platform where you can perform merchant assisted online transactions such as
-                - Domestic Money Transfer, Indo-Nepal Money Transfer, Aadhar Enabled Cash Withdrawal, Bill Payments,
-                Mobile & DTH Recharge, Flight & Hotel Booking and Assisted Shopping!
-  
-                All this and so much more using cash at your store.
-              </p>
-              <p style=" padding-left: 8%;
-        padding-right: 8%;margin-top: -.0px;">
-                We offer you the opportunity to kick start your digital business with zero investment! Offer a wide
-                variety of services to your customers, gain new customers & increase your footfall, build loyalty within
-                your community, and become the one stop shop for all your customer needs.
-              </p>
-              <p>FindiPay is driven to bring the opportunity for financial inclusivity,
-                empowerment, & convenience for all Indians.</p>
-            </div>
-          </div>
-        </header>
-  
-        <!-- F.A.Q List 2-->
-        <section id="counts" class="counts">
-          <div class="container" data-aos="fade-up">
-  
-            <div class="row gy-4" style=" margin-top: -8%;
-                      padding-left: 8%;
-                      padding-right: 8%;font-family: 'Roboto';">
-  
-              <div class="col-sm-4">
-                <div class="count-box text-center">
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
-                      class="purecounter"></span>
-                    <span>K+</span>
-                    <p class="text-center">Active Billers</p>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="col-sm-4">
-                <div class="count-box text-center">
-                  <div>
-                    <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
-                      class="purecounter"></span>
-                    <span>+</span>
-                    <p class="text-center">Banks</p>
-                  </div>
-                </div>
-              </div>
-  
-              <div class="col-sm-4">
-                <div class="count-box text-center">
-                  <div class="text-center">
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
-                      class="purecounter"></span>
-                    <span>+</span>
-                    <p class="text-center">Active Services</p>
-                  </div>
-                </div>
-              </div>
-  
-  
-  
-            </div>
-  
-          </div>
-        </section>
-  
-        <div class="row">
-  
-  
-  
-  
-        </div>
-  
-  
-      </div>
-  
-  
-  
-      <!-- End Values Section -->
-  
-      <!-- </section> -->
-      <!---How it works-->
-      <!-- <section id="about" class="values">
-  
-        <div class="container" data-aos="fade-up">
-  
-          <header class="section-header text-center">
-            <h5 class="top-title">PROCESS</h5>
-            <H1 style="margin-top: 25px;">How does it work?</H1>
-            <p class="mt-5 text-center">Our platform aims to provide a smooth and effortless experience for our users.
-              <br /> Here is how you can start earning with zero Investment.
-            </p>
-          </header>
-  
-          <div class="row">
-  
-          </div>
-          <div class="row">
-  
-            <div class="col-md-12">
-              <div class="row">
-                <div class="col-lg-4 text-center">
-                  <div class="numberCircle">1</div>
-                  <div class="box">
-  
-                    <h3>Generate Query</h3>
-                    <p>Submit your details in the contact us form to generate a query.</p>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="numberCircle">2</div>
-                  <div class="box">
-  
-                    <h3>KYC</h3>
-                    <p>Our representative will collect the required documents for verification.</p>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="numberCircle">3</div>
-                  <div class="box">
-  
-                    <h3>Start Earning</h3>
-                    <p>Your ID will be activated once verification is complete.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-  
-            <p class="mt-5 text-center">Working with us is as simple as 1 2 3. Interested?
-  
-            </p>
-          </div>
-          <div class="col-lg-12 text-center"> <button type="button" class="btn btn-Hex" id="Us"
-              style="height:41px; font-weight:600;border-color:black; box-shadow: none">Join-us</button>
-          </div>
-        </div>
-  
-      </section>End Values Section -->
-  
-  
-  
-    </section>
-    <section id="bout" class="bout" style="background-color: #f9f9ff;margin-top:-4% ;">
-      <div class="container">
-  
-        <div class="row">
-          <div class="col-xl-5 col-lg-6 d-flex" style="margin-top: 5%;">
-            <img class="boymob" src="./assets/images/I3.png" height="600px" width="500px">
-          </div>
-  
-          <div
-            class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5 text-justify">
-            <h3 style="color: #1A2851; font-size: 40px; ">HOW DO I SIGN UP?</h3>
-            <p style="line-height: 1.9; ">Our platform aims to provide you with a smooth and effortless experience when
-              using
-              our services. Working with FindiPay is as easy as 1,2,3. Here's how you can kick start
-              your digital business!</p>
-  
-            <div class="icon-box">
-              <div class="icon" style="background-color: #02A8C6;"><span class="Ninja"
-                  style="color: white; font-weight: 600; font-size: 25px;">1</span></div>
-              <h4 class="title">SUBMIT YOUR DETAILS</h4>
-              <p class="description">Send us your details via the contact form below or request a call back.</p>
-            </div>
-  
-            <div class="icon-box">
-              <div class="icon" style="background-color: #02A8C6;"><span class=""
-                  style="color: white; font-weight: 600; font-size: 25px;">2</span></div>
-              <h4 class="title">COMPLETE KYC</h4>
-              <p class="description">Our representative will collect your KYC documents for verification.</p>
-            </div>
-  
-            <div class="icon-box">
-              <div class="icon" style="background-color: #02A8C6;"><span class=""
-                  style="color: white; font-weight: 600;font-size: 25px;">3</span></div>
-              <h4 class="title">START EARNING!</h4>
-              <p class="description">Once your verification is complete, your ID will be activated.
-                You’re now ready to start earning!</p>
-            </div>
-            <div class="text-center"> <button type="button" class="btn btn- joinbtn Us" id="shgh"
-                style="background-color:#E31E24; color: white; font-weight:600;width: 100px;">Sign Up</button>
-              <span style="font-weight: 600; margin-left: 4%;margin-left: 4%;">Interested? Click the <span
-                  style="color:#E31E24;"> 'Sign Up'</span> button to get started</span>
-            </div>
-  
-  
-          </div>
-  
-        </div>
-  
-      </div>
-  
-  
-    </section><!-- End About Section -->
-  </section>
-  
-
-
-  <!-- ======= About Section ======= -->
-  
-  <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="services" style="margin-top: -4%;">
-      <section class="about" style="margin-top: -4%;">
-
-        <div class="container" data-aos="fade-up">
-          <div class="row gx-0">
-            <div class="col-md-12">
-              <div class="row">
-                <!-- <h5 class="top-title">BENEFITS</h5> -->
-                <h1 class="mt-2" style="padding-top: 3%; color: #1A2851; font-size: 40px;">ONE PLATFORM<BR>ENDLESS SERVICES.
-                </h1>
-                <p style=" padding-left: 12%;
-                padding-right: 12%; margin-top:2%;">Effortlessly cater to whatever your customers’ needs are. Our
-                  platform offers you a
-                  wide variety of services such as Domestic Money Transfer, Indo Nepal Transfer, Bill
-                  Payments, Travel & so much more!</p>
-              </div>
-              <!---====Features Heading===-->
-              <div class="row">
-                <section id="portfolio-details" class="portfolio-details">
-                  <div class="container ">
-                    <div class="row gy-4">
-                      <div class="col-md-1">
-                        <a class="swiper-button-prev" role="button" data-bs-slide="prev" style="color:white;">
-                        </a>
-                      </div>
-                      <div class="col-lg-10 slider-key">
-                        <div class="portfolio-details-slider swiper" id="carouselExampleControls" data-ride="carousel">
-                          <h5 class="top-title mt-1" style="text-align: left; font-size: 17px;">KEY FEATURES</h5>
-                          <div class="swiper-wrapper   align-items-center">
-  
-                            <div class="swiper-slide">
-                              <div class="row">
-                                <div class="col-md-8">
-  
-                                  <!-- <h5 class="top-title mt-1" style="text-align: left; font-size: 17px;">KEY FEATURES</h5> -->
-                                  <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">
-                                    SEND MONEY ANYTIME, ANYWHERE</h1>
-  
-                                  <p class="mt-4" style="text-align: left;font-size: 15px;">Support your family whenever,
-                                    wherever whether in India or Nepal! Enjoy a hassle-
-                                    free experience when sending money through FindiPay with our Domestic Money
-                                    Transfer or Indo-Nepal Transfer services.</p>
-                                </div>
-                                <div class="col-md-4"><img src="assets/images/Money-Transfer.png" alt=""></div>
+   <head>
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      <title>Findipay</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <!-- Favicons -->
+      <!-- Google Fonts -->
+      <link rel="stylesheet"
+         href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/compiled-4.20.0.min.css">
+      <link
+         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+         rel="stylesheet">
+      <!-- Vendor CSS Files -->
+      <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+      <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+      <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      <!-- Template Main CSS File -->
+      <link href="assets/css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <!-- ======= Header ======= -->
+      <header id="header" class="header fixed-top">
+         <div class="col-12 text-center xyz"> <span><i class="bi bi-clock"></i> Open Hours: 8 AM to 10
+            PM (Mon-Sat)</span> <a class="" style="margin-left:15px;"><i class="bi bi-envelope"></i>
+            contact@findipay.in</a> <span style="margin-left: 15px;"> <i class="bi bi-telephone"></i> 1800-121-447777
+         </div>
+         <div class="container-fluid container-xl d-flex align-items-center justify-content-between" style="margin-top: 2%;">
+            <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/images/FindiPay Logo_TEAL.jpg" alt="">
+            </a>
+            <nav id="navbar" class="navbar">
+               <ul>
+                  <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
+                  <li><a class="nav-link scrollto" href="#about">ABOUT US</a></li>
+                  <li><a class="nav-link scrollto" href="#services">SERVICES</a> </li>
+                  <li><a class="nav-link scrollto" href="#section_why">WHY US</a></li>
+                  <li><a class="nav-link scrollto" href="#contact-main">CONTACT</a></li>
+                  <!-- <li><a class="getstarted scrollto" href="Auth/DashBoard.html">LOG IN</a></li> -->
+                  <a class="getstarted scrollto animated-button" data-toggle="modal" data-target="#fluidModalRightSuccessDemo"
+                     style="color: white;">LOG IN</a>
+                  <div class="modal fade right" id="fluidModalRightSuccessDemo" tabindex="-1" role="dialog"
+                     aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
+                     <div class="modal-dialog modal-full-height modal-right modal-notify modal-success" role="document">
+                        <!--Content-->
+                        <div class="modal-content">
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                              style=" margin-top: 4%;margin-left:90%;"><span aria-hidden="true">&times;</span></button>
+                           <!--Header-->
+                           <div class="modal-header" style="background-color: white; box-shadow: none;">
+                           </div>
+                           <!--Body-->
+                           <div class="modal-body" id="formLogin">
+                              <div class="text-center">
+                                 <h2 style="margin-top: -20%; color:black; ">Welcome back!</h2>
+                                 <p style="color: black; font-size: medium;font-weight: 500;"> Securely login your findipay account
+                                 </p>
                               </div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="row">
-                                <div class="col-md-8">
-                                  <br />
-                                  <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px">KEY FEATURES</h5> -->
-                                  <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">EASY CASH
-                                    WITHDRAWAL WITH AePS </h1>
-  
-                                  <p class="mt-4" style="text-align: left; font-size: 15px;">Need cash? Or need to check
-                                    your bank balance? Never run out of cash wherever you
-                                    are! Making cash withdrawals or checking your bank balance is easy with our AePS
-                                    service available at our FindiPay stores.</p>
-                                </div>
-                                <div class="col-md-4"><img src="assets/images/AePS (1).png" alt=""></div>
+                              <div class="form-group">
+                                 <input type="text" id="mobileEmail" class="form-control validate modelinput"
+                                    placeholder="Mobile number/Email ID" style="margin-top: 10%;height:50px;"
+                                    onkeypress="return validateNumber(event)">
+                                 <div class="error" id="mobileEmailError"></div>
                               </div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="row">
-                                <div class="col-md-8">
-                                  <br />
-                                  <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px ">KEY FEATURES</h5> -->
-                                  <h1 class="mt-3" style="text-align: left; font-size: 25px; color: #1A2851;">STAY ON TOP
-                                    OF YOUR BILLS</h1>
-  
-                                  <p class="mt-4" style="text-align: left; font-size: 15px;">
-                                    Say bye bye to late bill payments! Enjoy the convenience of paying all your utility
-                                    bills
-                                    on time with FindiPay. No more stress of last date, long queues, and late fines when
-                                    paying your bills through FindiPay with our Bharat Bill Pay Services.
-                                  </p>
-                                </div>
-                                <div class="col-md-4"><img src="./assets/images/Bill-Pay (3).png" alt=""></div>
+                              <div class="form-group">
+                                 <input type="password" id="password" class="form-control validate modelinput" placeholder="Password"
+                                    style="margin-top: -1%;height: 50px;">
+                                 <div class="error" id="passwordError"></div>
                               </div>
-                            </div>
-  
-                            <div class="swiper-slide">
-                              <div class="row">
-                                <div class="col-md-8">
-                                  <br />
-                                  <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px">KEY FEATURES</h5> -->
-                                  <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">
-                                    ENJOY EASY TRAVEL BOOKINGS
-                                  </h1>
-  
-                                  <p class="mt-4" style="text-align: left; font-size: 15px;">
-                                    Need flight tickets to Goa? Check! Need train tickets to Shimla? Check! Hotel? Check!
-                                    FindiPay brings you all your travel needs under one roof. Offer hassle free and easy
-                                    travel bookings through FindiPay with our Flight, Train and Hotel booking services.
-                                  </p>
-                                </div>
-                                <div class="col-md-4"><img src="assets/images/Travel (1).png" alt=""></div>
+                              <!-- <a style="margin-top: 5%;" href="">Forgot password?</a> -->
+                              <div class="row mb-4">
+                                 <div class="col-md-6 d-flex justify-content-center">
+                                    <!-- Checkbox -->
+                                    <!-- <div class="form-check mb-0 mb-md-0" > -->
+                                    <div>
+                                       <input class="form-check-input" type="checkbox" value="" id="loginCheck" />
+                                       <label class="form-check-label" for="loginCheck" style="margin-top:10%;"> Remember me </label>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6  justify-content-center">
+                                    <!-- Simple link -->
+                                    <a data-toggle="modal" data-target="#forgetPasswordModal" style="color:#0FA4C4">Forgot
+                                    password?</a>
+                                 </div>
+                                 <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzWecTeBWmrCpJ"
+                                    style="margin-left: 10%;"></div>
+                                 <div class="justify-content-center">
+                                    <button type="button" class="animated-button" id="btnLogin"
+                                       style=" background-color:#0FA4C4;
+                                       width: 60%; height: 50px;margin-top:10% ; color:white; font-size: large; font-weight: bold; margin-left: 25%; border-radius: 5px;"
+                                       onclick="ValidateMobile(mailmob)"> <span style="display: block;
+                                       padding-top: px;
+                                       text-align: center;
+                                       line-height: 1em;">Proceed</span></a></button>
+                                 </div>
+                                 <!-- <a style="text-align: center; padding-left: 35%; color: #0FA4C4;" href="">Request a callback</a> -->
                               </div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="row">
-                                <div class="col-md-8">
-                                  <br />
-                                  <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px">KEY FEATURES</h5> -->
-                                  <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">APPLY FOR A
-                                    PANCARD </h1>
-  
-                                  <p class="mt-4" style="text-align: left; font-size: 15px;">
-                                    A PAN card is important to comply with Indian regulatory standards and for all
-                                    financial requirements. Through FindiPay you can avail PAN card services by following
-                                    some quick and easy steps!
-                                  </p>
-                                </div>
-                                <div class="col-md-4"><img src="assets/images/PAN.png" alt=""></div>
+                              <!-- <p class="text-center modal-footer"></p> -->
+                              <div class="text-center">
+                                 <p>Don't have an account?</p>
+                                 <a id="sign-up" href="#contact-main " style="margin-top: -8%; margin-left: 35%; color:#0FA4C4;">
+                                 Sign-up</a>
                               </div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="row">
-                                <div class="col-md-8">
-  
-                                  <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px">KEY FEATURES</h5> -->
-                                  <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">
-                                    EASY INSURANCE PREMIUM PAYMENTS
-                                  </h1>
-  
-                                  <p class="mt-4" style="text-align: left; font-size: 15px;">
-                                    Pay your insurance premiums in just a few clicks with FindiPay. Offer the convenience
-                                    & ease of paying insurance premiums in a few quick easy steps. No more stress of last
-                                    date and late fines when paying your premiums through FindiPay with our Premium
-                                    Payment Services.
-                                  </p>
-                                </div>
-                                <div class="col-md-4"><img src="assets/images/Insurance.png" alt=""></div>
-                              </div>
-                            </div>
-  
-  
-                          </div>
-                          <div class="swiper-pagination" style="bottom:-5px;"></div>
-  
+                              <p style="font-size: 12px;margin-left:14%; margin-top: 15%;">By Signing up, I accept Findipay<a
+                                 style="margin-top:-9%; margin-left: 44%; color:#0FA4C4;font-size: 12px;">Terms & Condition</a></p>
+                           </div>
+                           <!--Footer-->
+                           <!-- <div class="modal-footer justify-content-center">
+                              <a type="button" class="btn btn-success">
+                                  Get it now
+                                  <i class="far fa-gem ml-1"></i>
+                              </a>b
+                              <a  class="btn btn-outline-success waves-effect" data-dismiss="modal">No, thanks</a>
+                              </div> -->
                         </div>
-                        <!-- <div class="swiper-button-prev" ></div>
-                           <div class="swiper-button-next" ></div> -->
-  
-  
-                      </div>
-                      <div class="">
-                        <a class="swiper-button-next" style="color: white; margin-top: 4%;">
-  
-                        </a>
-                        <!-- <div class="swiper-pagination"></div> -->
-                      </div>
-  
-                      <!-- <div class="col-md-1"><a class="carousel-control-next" href="#about" role="button"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-                      </a>
-                    </div> -->
-  
-                    </div>
-                    <!-- 
-                  <a class="left carousel-control"  style="background-image:none;" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" style="    margin-top: 35%;
-                    margin-right: 20%;
-                    color: black;"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control"  style="background-image:none;" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" style="    color: black;
-                    margin-top: 35%;"></span>
-                    <span class="sr-only">Next</span>
-                  </a> -->
-                </section>
-              </div>
-              <!--==== End Features Heading ====-->
+                        <!--/.Content-->
+                     </div>
+                  </div>
+                  <button type="button" class="btn btn Us" id="joinUs" click="joinUsNow()"
+                     style="height:41px; background-color:white; font-weight: 500; margin-left:15px;border-color:black; box-shadow: none;">
+                  SIGN UP
+                  </button>
+               </ul>
+               <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <!-- .navbar -->
+         </div>
+      </header>
+      <!-- End Header -->
+      <!-- crousal -->
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+         <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+         <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      </ol>
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+         <section id="hero" class="hero align-items-center">
+            <div class="container">
+               <div class="row">
+                  <div style="padding:3%; color: white; font-weight: 600;"
+                     class="col-lg-7 flex-column justify-content-center main-head">
+                     <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
+                     <h1 style="font-size: 40px; text-align: left;"><span style="color: #0FA4C4;">ONE</span> PLATFORM
+                        <br><span style="color: #E31E24;">ENDLESS</span> SERVICES
+                     </h1>
+                     <div class="row mt-5">
+                        <p>Explore a wide variety of services such as Domestic Money Transfer,
+                           Indo Nepal Transfer, AePS Cash Withdrawal, Bill Paymaents, Travel & so much more!
+                        </p>
+                     </div>
+                     <div class="row">
+                        <div class="input-box">
+                           <span class="prefix">+91-</span>
+                           <input type="number" placeholder="0000000000" onkeypress="return validateNumber(event)" required />
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="text-lg-start mt-3">
+                           <button
+                              class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center animated-button Us">
+                           <span style="color:#0a0a0a">Request a Callback</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 hero-img">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <img src="assets/images/Bannner1.png" data-aos="zoom-out" data-aos-delay="200" class="img-fluid"
+                              alt="">
+                        </div>
+                     </div>
+                     <!-- <div class="row">
+                        <div class="col-md-10"></div>
+                        <div class="col-md-1" style="margin-top: -60px;z-index: 1;">
+                          <img src="assets/images/r.png" class="img-fluid img-peac-r" alt="">
+                        </div>
+                        </div> -->
+                  </div>
+               </div>
             </div>
-  
-          </div>
-        </div>
-        <!-- section color -->
+         </section>
+         <!-- End Hero -->
+      </div>
+      <div class="carousel-item">
+         <section id="hero" class="hero align-items-center">
+            <div class="container">
+               <div class="row">
+                  <div style="padding:3%; color: white;" class="col-lg-7 flex-column justify-content-center main-head">
+                     <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
+                     <h1 style="font-size: 40px; text-align: left; font-weight: bold ;line-height: 1.6;">
+                     <span
+                        style="color: #FF671F;">भा</span>र<span style="color: #046A38;">त</span> के Digital<br> Parivartan
+                     की इस<br> यात्रा में हमारे साथ<br> शामिल हो
+                     <div class="row mt-5">
+                        <p style="font-size: 25px;">आज ही <img src="./assets/images/FindiPay Logo_REVERSE.png" width="25%">
+                           के साथ जुड़े 
+                        </p>
+                     </div>
+                  </div>
+                  <div class="col-lg-5 hero-img">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <img src="./assets/images/Bannner2.png" data-aos="zoom-out" data-aos-delay="200" class="hand-imm"
+                              alt="">
+                        </div>
+                     </div>
+                  </div>
+         </section>
+         <!-- End Hero -->
+         </div>
+         <div class="carousel-item">
+         <section id="hero" class="hero align-items-center">
+         <div class="container">
+         <div class="row">
+         <div style="padding:3%; color: white; font-weight: 600;"
+            class="col-lg-7 flex-column justify-content-center main-head">
+         <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
+         <h1 style="font-size: 40px; text-align: left;"><span style="color: #0FA4C4;">ANYTIME
+         ANYWHERE</span><span> <br>MONEY TRANSFER<br> & WITHDRAWALS</h1>
+         <br />
+         <div class="row mt-1">
+         <p style="margin-top: -5%;">whether you need to send money home or need cash, have no fear
+         when Findipay is hear! Enjoy a hassle-free experience when you send money through
+         our Domestic Money Transfer & Indo-Nepal Transfer services or AePS cash withrawal service.
+         </p>
+         </div>
+         <div class="row">
+         <img class="inn" src="./assets/images/DMT (6).png">
+         <img class="inn" src="./assets/images/INMT (3).png">
+         <img class="inn" src="./assets/images/AePS (7).png">
+         </div>
+         </div>
+         <div class="col-lg-5 hero-img">
+         <!-- <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-1 mt-2">
+              <img src="assets/images/b.png" class="img-fluid img-peace-b" alt="">
+            </div>
+            </div> -->
+         <div class="row">
+         <div class="col-md-12">
+         <img src="assets/images/Bannner3.png" data-aos="zoom-out" data-aos-delay="200" class="map-in"
+            alt="">
+         </div>
+         </div>
+         <!-- <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-1" style="margin-top: -60px;z-index: 1;">
+              <img src="assets/images/r.png" class="img-fluid img-peac-r" alt="">
+            </div>
+            </div> -->
+         </div>
+         </div>
+         </div>
+         </section><!-- End Hero -->
+         </div>
+         <div class="carousel-item">
+         <section id="hero" class="hero align-items-center">
+         <div class="container">
+         <div class="row">
+         <div style="padding:3%; color: white; font-weight: 600;"
+            class="col-lg-7 flex-column justify-content-center main-head">
+         <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
+         <h1 style="font-size: 40px; text-align: left;"><span style="color: #0FA4C4;">STRESS
+         FREE</span><span><br>HOLIDAY BOOKINGS</h1>
+         <br />
+         <div class="row mt-3">
+         <p style="margin-top: -5%;">Let's keep holidays fun and exicting! Findipay has all your Travel
+         need under one roof. Provide hassle free and easy travel booking with our
+         Flight, Train and Hotel Booking services.
+         </p>
+         </div>
+         <div class="row">
+         <img class="inn" src="./assets/images/Flight (3).png">
+         <img class="inn" src="./assets/images/IRCTC (1).png">
+         <img class="inn" src="./assets/images/Hotel (2).png">
+         </div>
+         </div>
+         <div class="col-lg-5 hero-img">
+         <!-- <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-1 mt-2">
+              <img src="assets/images/b.png" class="img-fluid img-peace-b" alt="">
+            </div>
+            </div> -->
+         <div class="row">
+         <div class="col-md-12">
+         <img src="assets/images/Bannner4.png" data-aos="zoom-out" data-aos-delay="200" class="img-map-in"
+            alt="">
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </section><!-- End Hero -->
+         </div>
+         <div class="carousel-item">
+         <section id="hero" class="hero align-items-center">
+         <div class="container">
+         <div class="row">
+         <div style="padding:3%; color: white; font-weight: 600;"
+            class="col-lg-7 flex-column justify-content-center main-head">
+         <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
+         <h1 style="font-size: 40px; text-align: left;"><span style="color: #0FA4C4;">NEVER MISS </span><span> A
+         <br>BILL PAYMENT</h1>
+         <br />
+         <div class="row mt-1">
+         <p style="margin-top: -5%;">Say bye bye to late bill payments! Enjoy the convenience of paying all
+         your utility bills
+         on time with Findipay. No more stress of last date, long queues, and late fines when paying your
+         bills through
+         Findipay with our Bharat Bill pay Services.
+         </p>
+         </div>
+         <div class="row">
+         <!-- <div class="input-box">
+            <span class="prefix">+91-</span>
+            <input type="number" maxlength="10" placeholder="0000000000" />
+            
+            </div> -->
+         <img class="inn" src="./assets/images/Electricity (1).png">
+         <img class="inn" src="./assets/images/LPG (1).png">
+         <img class="inn" src="./assets/images/Water (1).png">
+         </div>
+         </div>
+         <div class="col-lg-5 hero-img">
+         <div class="row">
+         <div class="col-md-12">
+         <img src="assets/images/Bannner5.png" data-aos="zoom-out" data-aos-delay="200" class="img-billpay"
+            alt="">
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </section><!-- End Hero -->
+         </div>
+         <div class="carousel-item">
+         <section id="hero" class="hero align-items-center">
+         <div class="container">
+         <div class="row">
+         <div style="padding:3%; color: white; font-weight: 600;"
+            class="col-lg-7 flex-column justify-content-center main-head">
+         <!-- Driving the <span>Unbanked</span><br/> towards <span>Financial</span> <br/> <span>Inclusion</span> -->
+         <h1 style="font-size: 40px; text-align: left;"><span>BUILDING A NEW <br>DIGITAL </span><span
+            style="color:  #FF671F;">IN</span>DI<span style="color: #046A38;">A</span></h1>
+         <div class="row mt-5">
+         <p>Boost your digital business with zero investment! Offer a wide
+         variety of services to your customers, gain new customers & increase your footfall, build
+         loyalty within your communinty,and become the one stop shop for all
+         your customer needs while earning commission!
+         </p>
+         </div>
+         <div class="row">
+         <div id="container" style="white-space:nowrap;">
+         <div id="texts"
+            style="display:inline; white-space:nowrap; font-size: 18px; font-weight: 400;color:#f9f9ff">
+         Be a part of the new #digitalIndia with
+         </div>
+         <div id="image" style="display:inline;    margin-left: 2%;">
+         <img src="./assets/images/FindiPay Logo_REVERSE.png" width="15%" style="margin-top: 2%;">
+         </div>
+         </div>
+         </div>
+         <div class="row">
+         <div class="text-lg-start mt-3">
+         <img src="./assets/images/Get it on Playstore.png" width="30%">
+         </div>
+         </div>
+         </div>
+         <div class="col-lg-5 hero-img">
+         <div class="row">
+         <div class="col-md-12">
+         <img src="assets/images/Bannner6.png" data-aos="zoom-out" data-aos-delay="200"
+            class="img-map-in" alt="">
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </section><!-- End Hero -->
+         </div>
+         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+         </a>
+         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+         </a>
+         </div>
+      </div>
+      <!-- crousal end -->
+      <!---How it works-->
+      <section id="about" style="margin-top: -4%;" >
+         <section class="values" style="background-color:white;margin-top: -4%;">
+            <div class="container" data-aos="fade-up">
+               <header class="section-header text-center">
+                  <div class="col-md-12">
+                     <div class="row">
+                        <h1 class="top-title" style="font-size: 40px; color: #02A8C6; ;">ABOUT US</h1>
+                        <!-- <H1 style="margin-top: 20px;">Who we are, What we do.</H1> -->
+                        <p class="mt-2 text-center" style=" padding-left: 8%;
+                           padding-right: 8%; padding-top: 2%;">
+                           FindiPay is a fast and secure platform where you can perform merchant assisted online transactions such as
+                           - Domestic Money Transfer, Indo-Nepal Money Transfer, Aadhar Enabled Cash Withdrawal, Bill Payments,
+                           Mobile & DTH Recharge, Flight & Hotel Booking and Assisted Shopping!
+                           All this and so much more using cash at your store.
+                        </p>
+                        <p style=" padding-left: 8%;
+                           padding-right: 8%;margin-top: -.0px;">
+                           We offer you the opportunity to kick start your digital business with zero investment! Offer a wide
+                           variety of services to your customers, gain new customers & increase your footfall, build loyalty within
+                           your community, and become the one stop shop for all your customer needs.
+                        </p>
+                        <p>FindiPay is driven to bring the opportunity for financial inclusivity,
+                           empowerment, & convenience for all Indians.
+                        </p>
+                     </div>
+                  </div>
+               </header>
+               <!-- F.A.Q List 2-->
+               <section id="counts" class="counts">
+                  <div class="container" data-aos="fade-up">
+                     <div class="row gy-4" style=" margin-top: -8%;
+                        padding-left: 8%;
+                        padding-right: 8%;font-family: 'Roboto';">
+                        <div class="col-sm-4">
+                           <div class="count-box text-center">
+                              <div>
+                                 <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
+                                    class="purecounter"></span>
+                                 <span>K+</span>
+                                 <p class="text-center">Active Billers</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="count-box text-center">
+                              <div>
+                                 <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1"
+                                    class="purecounter"></span>
+                                 <span>+</span>
+                                 <p class="text-center">Banks</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="count-box text-center">
+                              <div class="text-center">
+                                 <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1"
+                                    class="purecounter"></span>
+                                 <span>+</span>
+                                 <p class="text-center">Active Services</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+         </section>
+         <section id="bout" class="bout" style="background-color: #f9f9ff;margin-top:-4% ;">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-5 col-lg-6 d-flex" style="margin-top: 5%;">
+                     <img class="boymob" src="./assets/images/I3.png" height="600px" width="500px">
+                  </div>
+                  <div
+                     class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5 text-justify">
+                     <h3 style="color: #1A2851; font-size: 40px; ">HOW DO I SIGN UP?</h3>
+                     <p style="line-height: 1.9; ">Our platform aims to provide you with a smooth and effortless experience when
+                        using
+                        our services. Working with FindiPay is as easy as 1,2,3. Here's how you can kick start
+                        your digital business!
+                     </p>
+                     <div class="icon-box">
+                        <div class="icon" style="background-color: #02A8C6;"><span class="Ninja"
+                           style="color: white; font-weight: 600; font-size: 25px;">1</span></div>
+                        <h4 class="title">SUBMIT YOUR DETAILS</h4>
+                        <p class="description">Send us your details via the contact form below or request a call back.</p>
+                     </div>
+                     <div class="icon-box">
+                        <div class="icon" style="background-color: #02A8C6;"><span class=""
+                           style="color: white; font-weight: 600; font-size: 25px;">2</span></div>
+                        <h4 class="title">COMPLETE KYC</h4>
+                        <p class="description">Our representative will collect your KYC documents for verification.</p>
+                     </div>
+                     <div class="icon-box">
+                        <div class="icon" style="background-color: #02A8C6;"><span class=""
+                           style="color: white; font-weight: 600;font-size: 25px;">3</span></div>
+                        <h4 class="title">START EARNING!</h4>
+                        <p class="description">Once your verification is complete, your ID will be activated.
+                           You’re now ready to start earning!
+                        </p>
+                     </div>
+                     <div class="text-center"> <button type="button" class="btn btn- joinbtn Us" id="shgh"
+                        style="background-color:#E31E24; color: white; font-weight:600;width: 100px;">Sign Up</button>
+                        <span style="font-weight: 600; margin-left: 4%;margin-left: 4%;">Interested? Click the <span
+                           style="color:#E31E24;"> 'Sign Up'</span> button to get started</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- End About Section -->
       </section>
-      <section id="features" class="features" style="background-color: #f9f9ff;margin-top: -4%;">
-        <div class="container" data-aos="fade-up">
-          <div class="row">
+      <!-- ======= About Section ======= -->
+      <main id="main">
+         <!-- ======= About Section ======= -->
+         <section id="services" style="margin-top: -4%;">
+            <section class="about" style="margin-top: -4%;">
+               <div class="container" data-aos="fade-up">
+                  <div class="row gx-0">
+                     <div class="col-md-12">
+                        <div class="row">
+                           <!-- <h5 class="top-title">BENEFITS</h5> -->
+                           <h1 class="mt-2" style="padding-top: 3%; color: #1A2851; font-size: 40px;">ONE PLATFORM<BR>ENDLESS SERVICES.
+                           </h1>
+                           <p style=" padding-left: 12%;
+                              padding-right: 12%; margin-top:2%;">Effortlessly cater to whatever your customers’ needs are. Our
+                              platform offers you a
+                              wide variety of services such as Domestic Money Transfer, Indo Nepal Transfer, Bill
+                              Payments, Travel & so much more!
+                           </p>
+                        </div>
+                        <!---====Features Heading===-->
+                        <div class="row">
+                           <section id="portfolio-details" class="portfolio-details">
+                              <div class="container ">
+                                 <div class="row gy-4">
+                                    <div class="col-md-1">
+                                       <a class="swiper-button-prev" role="button" data-bs-slide="prev" style="color:white;">
+                                       </a>
+                                    </div>
+                                    <div class="col-lg-10 slider-key">
+                                       <div class="portfolio-details-slider swiper" id="carouselExampleControls" data-ride="carousel">
+                                          <h5 class="top-title mt-1" style="text-align: left; font-size: 17px;">KEY FEATURES</h5>
+                                          <div class="swiper-wrapper   align-items-center">
+                                             <div class="swiper-slide">
+                                                <div class="row">
+                                                   <div class="col-md-8">
+                                                      <!-- <h5 class="top-title mt-1" style="text-align: left; font-size: 17px;">KEY FEATURES</h5> -->
+                                                      <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">
+                                                         SEND MONEY ANYTIME, ANYWHERE
+                                                      </h1>
+                                                      <p class="mt-4" style="text-align: left;font-size: 15px;">Support your family whenever,
+                                                         wherever whether in India or Nepal! Enjoy a hassle-
+                                                         free experience when sending money through FindiPay with our Domestic Money
+                                                         Transfer or Indo-Nepal Transfer services.
+                                                      </p>
+                                                   </div>
+                                                   <div class="col-md-4"><img src="assets/images/Money-Transfer.png" alt=""></div>
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="row">
+                                                   <div class="col-md-8">
+                                                      <br />
+                                                      <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px">KEY FEATURES</h5> -->
+                                                      <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">EASY CASH
+                                                         WITHDRAWAL WITH AePS 
+                                                      </h1>
+                                                      <p class="mt-4" style="text-align: left; font-size: 15px;">Need cash? Or need to check
+                                                         your bank balance? Never run out of cash wherever you
+                                                         are! Making cash withdrawals or checking your bank balance is easy with our AePS
+                                                         service available at our FindiPay stores.
+                                                      </p>
+                                                   </div>
+                                                   <div class="col-md-4"><img src="assets/images/AePS (1).png" alt=""></div>
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="row">
+                                                   <div class="col-md-8">
+                                                      <br />
+                                                      <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px ">KEY FEATURES</h5> -->
+                                                      <h1 class="mt-3" style="text-align: left; font-size: 25px; color: #1A2851;">STAY ON TOP
+                                                         OF YOUR BILLS
+                                                      </h1>
+                                                      <p class="mt-4" style="text-align: left; font-size: 15px;">
+                                                         Say bye bye to late bill payments! Enjoy the convenience of paying all your utility
+                                                         bills
+                                                         on time with FindiPay. No more stress of last date, long queues, and late fines when
+                                                         paying your bills through FindiPay with our Bharat Bill Pay Services.
+                                                      </p>
+                                                   </div>
+                                                   <div class="col-md-4"><img src="./assets/images/Bill-Pay (3).png" alt=""></div>
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="row">
+                                                   <div class="col-md-8">
+                                                      <br />
+                                                      <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px">KEY FEATURES</h5> -->
+                                                      <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">
+                                                         ENJOY EASY TRAVEL BOOKINGS
+                                                      </h1>
+                                                      <p class="mt-4" style="text-align: left; font-size: 15px;">
+                                                         Need flight tickets to Goa? Check! Need train tickets to Shimla? Check! Hotel? Check!
+                                                         FindiPay brings you all your travel needs under one roof. Offer hassle free and easy
+                                                         travel bookings through FindiPay with our Flight, Train and Hotel booking services.
+                                                      </p>
+                                                   </div>
+                                                   <div class="col-md-4"><img src="assets/images/Travel (1).png" alt=""></div>
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="row">
+                                                   <div class="col-md-8">
+                                                      <br />
+                                                      <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px">KEY FEATURES</h5> -->
+                                                      <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">APPLY FOR A
+                                                         PANCARD 
+                                                      </h1>
+                                                      <p class="mt-4" style="text-align: left; font-size: 15px;">
+                                                         A PAN card is important to comply with Indian regulatory standards and for all
+                                                         financial requirements. Through FindiPay you can avail PAN card services by following
+                                                         some quick and easy steps!
+                                                      </p>
+                                                   </div>
+                                                   <div class="col-md-4"><img src="assets/images/PAN.png" alt=""></div>
+                                                </div>
+                                             </div>
+                                             <div class="swiper-slide">
+                                                <div class="row">
+                                                   <div class="col-md-8">
+                                                      <!-- <h5 class="top-title mt-1" style="text-align: left;font-size: 17px">KEY FEATURES</h5> -->
+                                                      <h1 class="mt-3" style="text-align: left; font-size: 25px;color: #1A2851;">
+                                                         EASY INSURANCE PREMIUM PAYMENTS
+                                                      </h1>
+                                                      <p class="mt-4" style="text-align: left; font-size: 15px;">
+                                                         Pay your insurance premiums in just a few clicks with FindiPay. Offer the convenience
+                                                         & ease of paying insurance premiums in a few quick easy steps. No more stress of last
+                                                         date and late fines when paying your premiums through FindiPay with our Premium
+                                                         Payment Services.
+                                                      </p>
+                                                   </div>
+                                                   <div class="col-md-4"><img src="assets/images/Insurance.png" alt=""></div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="swiper-pagination" style="bottom:-5px;"></div>
+                                       </div>
+                                       <!-- <div class="swiper-button-prev" ></div>
+                                          <div class="swiper-button-next" ></div> -->
+                                    </div>
+                                    <div class="">
+                                       <a class="swiper-button-next" style="color: white; margin-top: 4%;">
+                                       </a>
+                                       <!-- <div class="swiper-pagination"></div> -->
+                                    </div>
+                                 </div>
+                           </section>
+                           </div>
+                           <!--==== End Features Heading ====-->
+                        </div>
+                     </div>
+                  </div>
+                  <!-- section color -->
+            </section>
+            <section id="features" class="features" style="background-color: #f9f9ff;margin-top: -4%;">
+            <div class="container" data-aos="fade-up">
+            <div class="row">
             <!-- <h5 class="top-title">SERVICES</h5> -->
             <h1 class="mt-5" style=" color:#1A2851;font-size: 40px;">EXPLORE OUR RANGE OF SERVICES</h1>
             <p class="mt-3 text-center" style="font-weight: 400; padding-left: 13%; padding-right: 13%;">Our services
-              include financial management tools that
-              enable clients to view
-              all their accounts in one place, track their expenses, and receive personalized financial advice. We
-              also
-              offer investment solutions that cater to investors of all levels, from beginner to advanced.</p>
-          </div>
-          <div class="row">
+            include financial management tools that
+            enable clients to view
+            all their accounts in one place, track their expenses, and receive personalized financial advice. We
+            also
+            offer investment solutions that cater to investors of all levels, from beginner to advanced.</p>
+            </div>
+            <div class="row">
             <div class="col-12 aeps">
-              <ul class="nav nav-tabs row gy-4 d-flex">
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-1">
-                    <!-- <i class="bi bi-binoculars color-cyan"></i> -->
-                    <img src="assets/images/AePS (5).png" style="width: 100%;">
-                    <h4 style="font-size: 14px;">AePS</h4>
-                  </a>
-                </li><!-- End Tab 1 Nav -->
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                    <!-- <i class="bi bi-box-seam color-indigo"></i> -->
-                    <img src="assets/images/DMT (4).png" style="width: 100%;">
-                    <h4 style="font-size: 14px;">DMT</h4>
-                  </a>
-                </li><!-- End Tab 2 Nav -->
-  
-                <!-- <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                    <img src="assets/images/DMR (1).png" style="width: 100%;">
-                    <h4 style="font-size: 14px;">DMR</h4>
-                  </a>
-                </li> -->
-                <!-- End Tab 3 Nav -->
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                    <!-- <i class="bi bi-command color-red"></i> -->
-                    <img src="assets/images/INMT (1).png" style="width: 100%;">
-                    <h4 style="font-size: 14px;">INMT</h4>
-                  </a>
-                </li><!-- End Tab 4 Nav -->
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
-                    <!-- <i class="bi bi-easel color-blue"></i> -->
-                    <img src="assets/images/BBPS (4).png" style="width: 100%;">
-                    <h4 style="font-size: 14px;">BBPS</h4>
-                  </a>
-                </li><!-- End Tab 5 Nav -->
-  
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 cash">
-  
-              <ul class="nav nav-tabs row gy-4 d-flex">
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-1">
-                    <!-- <i class="bi bi-binoculars color-cyan"></i> -->
-                    <img src="assets/images/Cash-drop (1).png" style="width: 100%;">
-                    <h4 style="font-size: 14px;">Cash Drop</h4>
-                  </a>
-                </li><!-- End Tab 1 Nav -->
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                    <!-- <i class="bi bi-box-seam color-indigo"></i> -->
-                    <img src="assets/images/PAN (3).png" style="width: 100%;">
-                    <h4 style="font-size: 14px;"> Pan Card</h4>
-                  </a>
-                </li><!-- End Tab 2 Nav -->
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                    <!-- <i class="bi bi-brightness-high color-teal"></i> -->
-                    <img src="assets/images/Train (1).png" style="width: 100%;">
-                    <h4 style="font-size: 14px;">Train Booking</h4>
-                  </a>
-                </li><!-- End Tab 3 Nav -->
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                    <!-- <i class="bi bi-command color-red"></i> -->
-                    <img src="assets/images/Flight (1).png" style="width: 100%;">
-                    <h4 style="font-size: 14px;">Flight Booking</h4>
-                  </a>
-                </li><!-- End Tab 4 Nav -->
-  
-              </ul>
-            </div>
-          </div>
-          <div class="row" data-aos="fade-up">
-            <div class="col-12 policy">
-  
-              <ul class="nav nav-tabs row gy-4 d-flex">
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-1">
-                    <!-- <i class="bi bi-binoculars color-cyan"></i> -->
-                    <img class="wimg" src="assets/images/Insurance (3).png">
-                    <h4 style="font-size: 14px;">Insurance Policy</h4>
-                  </a>
-                </li><!-- End Tab 1 Nav -->
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                    <!-- <i class="bi bi-box-seam color-indigo"></i> -->
-                    <img class="wimg" src="assets/images/Hotels.png">
-                    <h4 style="font-size: 14px;">Hotel Booking</h4>
-                  </a>
-                </li><!-- End Tab 2 Nav -->
-  
-                <li class="nav-item col-6 col-md-4 col-lg-2">
-                  <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                    <!-- <i class="bi bi-brightness-high color-teal"></i> -->
-                    <img class="wimg" src="assets/images/cc.png">
-                    <h4 style="font-size: 14px;margin-left: 27px;">Credit Card Payment</h4>
-                  </a>
-                </li><!-- End Tab 3 Nav -->
-  
-  
-  
-              </ul>
-            </div>
-  
-          </div>
-  
-        </div>
-  
-      </section>
-    </section>
-    
-    <section id="section_why" style="margin-top: -4%;">
-      <section id="section_why_1" style="margin-top: -4%;" >
-        <div class="row">
-          <div class="col-md-12">
-            <img src="./assets/images/I6 (3).png" class="center">
-            <a class="learnmore" href="https://tsiplc.com/">Learn More</a>
-            <div class="why mor">
-              <div id="container" style="white-space:nowrap ;margin-left: 35%;">
-  
-                <!-- <div id="texts"
-                  style="display:inline; white-space:nowrap; font-size: 35px; font-weight: 650;color:#1A2851">
-                  WHY
-                </div> -->
-                <div id="image" style="display:inline;">
-                  <img src="./assets/images/Why-Findipay.png" width="70%">
-                </div>
-                <!-- <div> <span> WHY</span> <img src="assets/images/FindiPay Logo_TEAL.jpg" alt=""
-              width="200px" style="margin-top: -1.4%;margin-left: 1%;"></span>
-            </div> -->
-              </div>
-            </div>
-            <div class="text-center" id="smpp"> <button type="button" class="btn joinbtn Us"
-                style="background-color:#E31E24; color: white;">Sign Up</button>
-              <span style="font-weight: 600;margin-left: 2%;">Interested? Click the<span style="color:#E31E24;"> 'Sign Up'
-                </span> button to get started</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="ervices" class="ervices section-bg" style="margin-top: -4%;">
-        <div class="container">
-          <div class="ection-title">
-  
-            <!-- <span style="font-size: 40px ">WHY</span> <img src="assets/images/FindiPay Logo_TEAL.jpg" alt=""
-                width="200px" style="margin-top: -1.4%;margin-left: 1%;"> -->
-            <div id="container" style="white-space:nowrap ; margin-left: 30%;">
-  
-              <div id="texts"
-                style="display:inline; white-space:nowrap; font:size 50px;; font-weight: 650;color:#02A8C6; margin-top: 3%;">
-                WHY
-              </div>
-              <div id="image" style="display:inline;">
-                <img src="./assets/images/FindiPay Logo_TEAL.jpg" width="35%">
-              </div>
-  
-  
-              <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-            </div>
-  
-            <div class="row" style="margin-top: 5%;">
-              <div class="col-lg-4 col-md-6 ">
-                <!-- <div class="icon-box" style="background-color: #02A8C6;color: #FFFFFF;    height: 90%; ">
-                <div class="icon"><i class="" style="color: #ff689b;"></i></div>
-                <h4 class="title" style="font-size: 21px;font-family: 500; color: #FFFFFF;">Customer Service</h4>
-                <p class="description" style="font-size: 17px; font-weight: 400;">Talk to us about any concerns, 24/7.</p>
-              </div> -->
-                <img src="./assets/images/c1.png" width="90%">
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <!-- <div class="icon-box" style="background-color: #E7F1FF;color:#1A2851;    height: 90%; ">
-                <div class="icon"><i class="" style="color: #e9bf06;"></i></div>
-                <h4 class="title" style="font-size: 21px;font-family: 500;"><a href="">Safety & Security</a></h4>
-                <p class="description" style="font-size: 17px; font-weight: 400;">Your safety is our top priority.</p>
-              </div> -->
-                <img src="./assets/images/c2.png" width="90%">
-              </div>
-  
-              <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
-                <!-- <div class="icon-box" style="background-color: #02A8C6;color: #FFFFFF;    height: 90%; ">
-                <div class="icon"><i class="" style="color: #3fcdc7;"></i></div>
-                <h4 class="title" style="font-size: 21px;font-family: 500;color: #FFFFFF;">100% Transparency</h4>
-                <p class="description" style="font-size: 17px; font-weight: 400;">No Find print and no hidden charges.</p>
-              </div> -->
-                <img src="./assets/images/c3 (1).png" width="90%">
-              </div>
-              <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
-                <!-- <div class="icon-box" style="background-color: #E7F1FF;color:#1A2851;margin-top: 5%; height: 70%; ">
-                <div class="icon"><i class="" style="color:#41cf2e;"></i></div>
-                <h4 class="title" style="font-size: 21px;font-family: 500;"><a href="">User Friendly</a></h4>
-                <p class="description" style="font-size: 17px; font-weight: 400;">Our Web & Mobile App is simple and easy
-                  to use.</p>
-              </div> -->
-                <img src="./assets/images/c4.png" width="90%">
-              </div>
-  
-              <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
-                <!-- <div class="icon-box" style="background-color: #02A8C6;color: #FFFFFF;margin-top: 5%;  height:70%; ">
-                <div class="icon"><i class="" style="color: #d6ff22;"></i></div>
-                <h4 class="title" style="font-size: 21px;font-family: 500;color: #FFFFFF;">Trusted Partners</h4>
-                <p class="description" style="font-size: 17px; font-weight: 400;">Partnered with trusted players in the
-                  industry.</p>
-              </div> -->
-                <img src="./assets/images/c5 (1).png" width="90%">
-              </div>
-              <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
-                <!-- <div class="icon-box" style="background-color: #E7F1FF;color:#1A2851;margin-top: 5%; height: 70%; ">
-                <div class="icon"><i class="" style="color: #4680ff;"></i></div>
-                <h4 class="title" style="font-size: 21px;font-family: 500;"><a href="">A TSI product</a></h4>
-                <p class="description" style="font-size: 17px; font-weight: 400;">Created by one of India’s largest
-                  Payment Solution companies.</p>
-                <a href="https://tsiplc.com/" style="    font-weight: 700;
-                font-style: italic;
-                color: rgb(227, 30, 36);
-                text-decoration: none; margin-left: 14%;">Learn More</a>
-              </div> -->
-                <img src="./assets/images/c6.png" width="90%">
-                <a class="Lnmore" href="https://tsiplc.com/">Learn More</a>
-              </div>
-            </div>
-  
-          </div>
-          <div class="text-center"> <button type="button" class="btn btn- joinbtn"
-              style="background-color:#E31E24; color: white;">Sign Up</button>
-            <span style="font-weight: 600;margin-left: 2%;">Interested? Click the<span style="color:#E31E24;"> 'Sign Up'
-              </span> button to get started</span>
-          </div>
-        </div>
-      </section><!-- End Services Section -->
-
-      <section id="clients" class="clients" style="min-height:400px;margin-top: -4%;">
-
-        <div class="container" data-aos="fade-up">
-  
-          <header class="section-header">
-            <h5 class="top-title">TRUSTED BY</h5>
-          </header>
-  
-          <div class="clients-slider swiper1" style="overflow:unset; padding-left: 20px;padding-right: 10px;">
-            <div class="swiper-wrapper align-items-center">
-              <div class="swiper-slide"><img src="assets/images/PNB.png" class="img-fluid" alt="" height="100%"></div>
-              <div class="swiper-slide"><img src="assets/images/BBPS (1).png" class="img-fluid" alt="" height="100%">
-              </div>
-              <!-- <div class="swiper-slide"><img src="assets/images/Fastag (1).png" class="img-fluid" alt=""></div> -->
-              <div class="swiper-slide"><img src="assets/images/Prabhu.png" class="img-fluid" alt="" height="100%">
-              </div>
-              <div class="swiper-slide"><img src="assets/images/HDFC.png" class="img-fluid" alt="" height="100%"></div>
-              <div class="swiper-slide"><img src="assets/images/yatra.png" class="img-fluid" alt="" height="100%"></div>
-              <div class="swiper-slide"><img src="assets/images/icici.png" class="img-fluid" alt="" height="100%"></div>
-              <div class="swiper-slide"><img src="assets/images/cashfree (1).png" class="img-fluid" alt="" height="100%">
-              </div>
-              <div class="swiper-slide"><img src="assets/images/sbi.png" class="img-fluid" alt="" height="100%"></div>
-              <div class="swiper-slide"><img src="assets/images/UTI.png" class="img-fluid" alt="" height="100%"></div>
-              <div class="swiper-slide"><img src="assets/images/Razorpay.png" class="img-fluid" alt="" height="100%">
-              </div>
-              <div class="swiper-slide"><img src="assets/images/Qwickcilver.png" class="img-fluid" alt="" height="100%">
-              </div>
-              <div class="swiper-slide"><img src="assets/images/Paysprint.png" class="img-fluid" alt="" height="100%">
-              </div>
-              <div class="swiper-slide"><img src="assets/images/Fing-pay.png" class="img-fluid" alt="" height="100%">
-              </div>
-            </div>
-            <!-- <div class="swiper-pagination"></div> -->
-          </div>
-        </div>
-  
-      </section><!-- End Clients Section -->
-      <section id="about-section" class="parallax" data-stellar-background-ratio="0.5"
-      style="background-position: 0% -125.667px;margin-top: -4%;">
-      <div class="page-header-wrapper">
-
-        <div class="container">
-          <div class="wow fadeIn animated" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s;">
-
-            <!-- <span class="center-border-line" style="margin-top: -38px;background-color: #fff;"></span> -->
-          </div>
-
-          <div class="container" data-aos="fade-up">
-            <div class="row">
-              <header class="section-header text-white">
-                <!-- <h5 CLASS="top-title">PARENT COMPANY</h> -->
-                <h1 class="col-12">Transaction Solutions International (TSI)</h1>
-                <p class="col-10" style="margin-left: 6%; text-align: center;">Incorporated in 2005, TSI specializes
-                  in
-                  creating and
-                  executing
-                  transaction
-                  payment solutions for Banks, Financial Institutions and Utility companies. TSI also
-                  provides financial institutions with its in-house technology solutions such as
-                  Electronic Surveillance, Power Management, Payments Marketplace, and Loyalty
-                  Rewards offerings.</p>
-              </header>
-            </div>
-            <div class="row about_row " data-wow-delay="0.3s">
-
-              <div class="col-sm-3 wow fadeIn animated" data-wow-delay="1s"
-                style="visibility: visible; animation-delay: 1s;">
-                <!--  <a class="page-scroll" href="#strategy-section"> -->
-                <div class="text-center image_center shadow_cs">
-                  <img class="img-responsive" src="assets/images/Processing.png" style="width: 100%; height:100%;">
-                </div>
-                <!-- 550+ million -->
-
-                <h4 class="features-title2 ">
-                  <span class="u378-3 "><sup style="font-size:16px; position: relative;
-               top: -17px;left: 5px;"></sup>₹1.5 <sup style="font-size:24px;"></sup><span class="u378-5">
-                      Trillion
-                    </span></span>
-                  <div class="u379-4" style="width:70%;">
-                    <p class="removepadding_margin" style="text-align: center;">Processed per year </p>
-                  </div>
-                </h4>
-                <!-- </a> -->
-              </div>
-
-              <div class="col-sm-3 wow fadeIn  animated" data-wow-delay="1.5s"
-                style="visibility: visible; animation-delay: 1.5s;">
-                <!--  <a class="page-scroll" href="#portfolio-section"> -->
-                <div class="text-center image_center shadow_cs">
-                  <img class="img-responsive" src="assets/images/Transaction.png" style="width: 100%; height:100%;">
-                </div>
-                <h4 class="features-title2 ">
-                  <span class="u378-3 ">550+<span class="u378-5">  Million </span></span>
-                  <div class="u379-4">
-                    <p class="removepadding_margin">Transactions per year</p>
-                  </div>
-                </h4>
-                <!--  </a> -->
-              </div>
-
-              <div class="col-sm-3 wow fadeIn animated" data-wow-delay="2s"
-                style="visibility: visible; animation-delay: 2s;">
-                <!--   <a class="page-scroll" href="#team-section"> -->
-                <div class="text-center image_center shadow_cs">
-                  <img class="img-responsive" src="assets/images/institution.png" style="width: 100%; height:100%;">
-                </div>
-                <h4 class="features-title2 ">
-                  <span class="u378-3 ">40+ </span>
-                  <div class="u379-4">
-                    <p class="removepadding_margin">Institutions serviced</p>
-                  </div>
-                </h4>
-                <!--  </a> -->
-              </div>
-
-              <div class="col-sm-3 wow fadeIn animated" data-wow-delay="2.5s"
-                style="visibility: visible; animation-delay: 2.5s;">
-                <!--   <a class="page-scroll" href="#team-section"> -->
-                <div class="text-center image_center shadow_cs">
-                  <img class="img-responsive" src="assets/images/Staaa.png" style="width: 100%; height:100%;">
-                </div>
-                <h4 class="features-title2 ">
-                  <span class="u378-3 ">20+ <span class="u378-5">States</span></span>
-                  <div class="u379-4">
-                    <p class="removepadding_margin">Pan India Operations </p>
-                  </div>
-                </h4>
-                <!--  </a> -->
-              </div>
-
-            </div>
-            <!-- <div class="text-center example_e" style="margin-top:3% ;margin-left: 40%;" data-aos="fade-up">
-              <a href="https://tsiplc.com/" style="padding-top:30%;color:white;">Click Here to Know More <i
-                  class="bi bi-arrow-right"></i></a>
-
-            </div> -->
-          </div>
-        </div>
-
-        <!-- </section> -->
-      </div>
-
-    </section>
-    <!-- remove Testimonials Section -->
-
-    </section>
-   
-   
-
-
-    
-
-    <!-- ======= Clients Section ======= -->
-    
-
-
-    <!-- ======= Features Section ======= -->
-
-
-    <!-- ======= Services Section ======= -->
-    <!-- <section id="" class="services">
-
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <header class="section-header text-white"> -->
-    <!-- <h5 CLASS="top-title">PARENT COMPANY</h> -->
-    <!-- <h1 class="col-12">Transaction Solutions International (TSI)</h1>
-                <p class="col-10" style="margin-left: 6%; text-align: center;">Incorporated in 2005, TSI specializes in
-                  creating and
-                  executing
-                  transaction
-                  payment solutions for Banks, Financial Institutions and Utility companies. TSI also
-                  provides financial institutions with its in-house technology solutions such as
-                  Electronic Surveillance, Power Management, Payments Marketplace, and Loyalty
-                  Rewards offerings.</p>
-            </header>
-          </div>
-          <div class="mob">
-            <div class="row gy-4" style="margin-left: 8%;">
-
-              <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div>
-                  <img src="assets/images/Processing.png" style="width: 36%; height: 36%;margin-left: 12%;">
-                  <h5 class="mrg" style="margin-left: 10%;">₹ <span data-purecounter-start="0"
-                      data-purecounter-end="1500" data-purecounter-duration="1" class="purecounter"></span>B</h5>
-                  <p> Processed Per Year</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div>
-                  <img src="assets/images/Transaction.png" style="width: 36%; height: 36%;margin-left: 12%;">
-                  <h5 class="mrg" style="margin-left: 10%;">₹<span data-purecounter-start="0" data-purecounter-end="550"
-                      data-purecounter-duration="1" class="purecounter"></span>M+</h5>
-                  <p>Transaction per year</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div>
-                  <img src="assets/images/Services.png" style="width: 36%; height: 36%;margin-left: 10%;">
-                  <h5 class="mrg"><span data-purecounter-start="0" data-purecounter-end="40"
-                      data-purecounter-duration="1" class="purecounter" style="margin-left: 20%;"></span>+</h5>
-                  <p>Institutions Serviced</p>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div>
-                  <img src="assets/images/Staaa.png" style="width: 36%; height: 36%;margin-left: 6%;">
-                  <h5 class="mrg"><span data-purecounter-start="0" data-purecounter-end="20"
-                      data-purecounter-duration="1" class="purecounter" style="margin-left: 17%;"></span>+</h5>
-                  <p> States Operations</p>
-                </div>
-              </div>
-
-
-
-            </div>
-          </div>
-
-        </div>
-        <div class="text-center" style="margin-top:7%" data-aos="fade-up">
-          <a href="https://tsiplc.com/" style="padding-top:30%;color:white;">Click Here to Know More <i
-              class="bi bi-arrow-right"></i></a>
-
-        </div>
-
-      </section>End Services Section -->
-   
-    <!-- ======= Testimonials Section ======= -->
-    
-
-    <!-- ======= Pricing Section ======= -->
-    <section id="contact-main" style="margin-top: -4%;">
-      <section class="contact-main" style="margin-top: -4%;">
-
-        <div class="container" data-aos="fade-up">
-          <div class="row p-5">
-            <div class="col-md-12 contact-tile">
-              <div class="row text-center pt-5">
-                <!-- <h5 class="top-title mt-5">CONTACT US</h5> -->
-  
-                <H1 class="mt-3" style="color: #1A2851; font-size: 40px;">LAUNCH YOUR DIGITAL STORE TODAY!</H1>
-                <p style="font-size: 20px; font-weight:400;">Interested in becoming a FindiPay partner?<br> Send us your
-                  details today in the form below!</p>
-              </div>
-              <!-- <div class="row mt-5" style="margin-left: 4%;">
-                <div class="col-md-4 contact-detail"
-                  <img src="assets/images/Phone Icon.png" alt="Phone Icon" />
-                  <h5 style="display: inline;">1800-121-447777</h5>
-                </div>
-                <div class="col-md-4 contact-detail">
-                  <img src="assets/images/Email Icon.png" alt="Phone Icon" />
-                  <h5 style="display: inline;">contact@findipay.in</h5>
-                </div>
-                <div class="col-md-4 contact-detail">
-                  <img src="assets/images/Website icon.png" alt="Phone Icon" />
-                  <h5 style="display: inline;">www.findipay.in</h5>
-                </div>
-                <div class="col-md-12 contact-detail" style="text-align:center;padding-right: 7%; margin-top:20px;">
-                  <img src="assets/images/Address-8.png" alt="Phone Icon" />
-                  <h5 style="display: inline;">223, DLF Prime Tower,Okhla Phase 1, New Delhi-110020</h5>
-                </div>
-              </div> -->
-              <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10" data-aos="fade-up">
-                  <div class="row form-tile">
-                    <div class="col-lg-12" id="form">
-                      <form action="forms/contact.php" action="" method="post" class="php-email-form needs-validation">
-                        <div class="row gy-4" style="margin-top:-10%;">
-                          <div class="col-md-6">
-                            <input type="text" name="name" id="firstName" class="form-control" placeholder="Full Name"
-                              onkeypress="return lettersOnly(event)">
-                            <div class="error" id="firstNameError"></div>
-                          </div>
-                          <div class="col-md-6 ">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
-                              onblur="validateEmail(this);">
-                            <div class="error" id="emailError"></div>
-                          </div>
-                          <div class="col-md-6">
-                            <input type="text" class="form-control" id="mobileNumber" name="mobile"
-                              placeholder="Mobile.no" onkeypress="return validateNumber(event)">
-                            <div class="error" id="mobileNumberError"></div>
-                          </div>
-                          <div class="col-md-6">
-                            <input type="text" class="form-control" id="pinCode" name="pincode" placeholder="Pincode"
-                              maxlength="6" onkeypress="return validateNumber(event)">
-                            <div class="error" id="pinCodeError"></div>
-                          </div>
-                          <div class="col-md-12">
-                            <textarea class="form-control" id="message"
-                              style="resize: none;padding-top: 20px;padding-left: 15px" name="message" rows="6"
-                              placeholder="Message"></textarea>
-                            <div class="error" id="messageError"></div>
-                          </div>
-                          <div class="col-md-12 text-center">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                            <button type="button" id="submitButton" class="animated-button">Submit</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-1"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-      </section><!-- End Pricing Section -->
-      <section style="margin-top: -4%;">
-        <div class="card contus">
-          <div class="card-body">
-            <h5 class="card-title text-center"
-              style="font-size: 40px; font-weight: 700;color: rgb(9, 44, 91); margin-top:4%;">CONTACT US
-            </h5>
-            <div class="row">
-              <div class="col-lg-6"> <img src="./assets/images/I7.png" width="90%">
-              </div>
-              <div class="col-lg-6">
-                <div class="contact-detail" style="margin-top:4%;">
-                  <img src="./assets/images/location-8.png" alt="Phone Icon" height="40px" width="40px" />
-                  <h5 style="display: inline;font-weight: 400;
-                  font-style: normal;
-                  color: rgb(9, 44, 91); margin-left: 2%;">316, DLF Prime Tower, Okhla Phase 1<br>
-                    <span style="margin-left: 11%;">New Delhi-110020</span>
-                  </h5>
-                </div>
-                <div class=" contact-detail" style="margin-top: 4%;">
-                  <img src="./assets/images/Website-8.png" alt="Phone Icon" height="40px" width="40px" />
-                  <h5 style="display: inline;font-weight: 400;
-                  font-style: normal;
-                  color: rgb(9, 44, 91);margin-left: 2%;">www.findipay.in</h5>
-                </div>
-                <div class=" contact-detail" style="margin-top: 4%;">
-                  <img src="./assets/images/email-8.png" alt="Phone Icon" height="40px" width="40px" />
-                  <h5 style="display: inline;font-weight: 400;
-                  font-style: normal;
-                  color: rgb(9, 44, 91);margin-left: 2%;">contact@findipay.in</h5>
-                </div>
-                <div class="contact-detail" style="margin-top: 4%;">
-                  <img src="./assets/images/Phone-8.png" alt="Phone Icon" height="40px" width="40px" />
-                  <h5 style="display: inline;font-weight: 400;
-                  font-style: normal;
-                  color: rgb(9, 44, 91);margin-left: 2%;">1800-121-447777</h5>
-                </div>
-                <div>
-                  <p style="font-weight: 700;
-                  font-style: italic;
-                  color: rgb(9, 44, 91);
-                  text-decoration: none; margin-top:5%;"> Also find us on our social media platform</p>
-                </div>
-                <!-- <div class="row">
-                  <img class="in" src="./assets/images/in image.png">
-                  <img class="in" src="./assets/images/fbbbbkk.png">
-                </div> -->
-  
-  
-              </div>
-  
-            </div>
-  
-          </div>
-        </div>
-  
-  
-  
-  
-      </section>
-    </section>
-    
-    
-
-
-
-
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn Us " data-toggle="modal" data-target="#exampleModal" style="position: fixed;
-bottom: 50px;
-right: 9px; background-color: #0FA4C4; color: white;">
-      <!-- <i class="bi bi-calculator"></i> -->
-      Income calculator
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade right" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-          <div>
-            <!-- class/modal-header" -->
-            <!-- <h5 class="modal-title" id="exampleModalLabel"></h5> -->
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true" style="margin-right: 20px; margin-top: 10%;">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-
-            <div class="row">
-              <a class="home-link" href="index.html" title="Mobisafar" rel="home">
-                <img id="logo-img" class="img-center" src="assets/images/FindiPay Logo_TEAL.jpg" alt="logo-img"
-                  style="width: 150px; margin: auto; display: block; margin-bottom: 10px;">
-
-              </a>
-              <p style="margin: 0; color: #000; text-align: center; font-weight: 500; margin-bottom: 10px;">Calculate
-                Your Income</p>
-              <div class="row">
-                <div class="col-md-8">
-                  <form id="configform">
-                    <table class="noBorder" id="incomeCal">
-                      <tr class="noBorder"
-                        style="background: #c10c0c; color:white; font-weight:300 !important; font-size:14px;">
-                        <th>USP</th>
-                        <th>Avg.tkt size</th>
-                        <th>No of Txn.</th>
-                        <th> Commission per Txn </th>
-                        <th> Commission earned per day </th>
-                      </tr>
-                      <tr>
-                        <td>Domestic Money Transfer</td>
-                        <td>₹2000</td>
-                        <td>
-                          <input style="width:90px; text-align: center;" type="text" id="numberOfTransactionDMT"
-                            onkeyup="calculateCommision('numberOfTransactionDMT','spanDMT','resultDMT');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6" />
-                        </td>
-                        <td id="secondNumber">
-                          <span>₹</span>
-                          <span id="spanDMT">5</span>
-                        </td>
-                        <td id="resultDMT"></td>
-                      </tr>
-                      <tr>
-                        <td>Aadhar Pay(AePS)</td>
-                        <td>₹1000</td>
-                        <td>
-                          <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionAEPS"
-                            onkeyup="calculateCommision('numberOfTransactionAEPS','spanAEPS','resultAEPS');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
-                        </td>
-                        <td>
-                          <span>₹</span>
-                          <span id="spanAEPS">10</span>
-                        </td>
-                        <td id="resultAEPS"></td>
-                      </tr>
-                      <tr>
-                        <td width="50%"> Indo Nepal Money Transfer</td>
-                        <td>₹100</td>
-                        <td>
-                          <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionINMT"
-                            onkeyup="calculateCommision('numberOfTransactionINMT','spanINMT','resultINMT');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
-                        </td>
-                        <td>
-                          <span>₹</span>
-                          <span id="spanINMT">3</span>
-                        </td>
-                        <td id="resultINMT"></td>
-                      </tr>
-                      <tr>
-                        <td width="50%">Domestic Money Remittance</td>
-                        <td>₹1500</td>
-                        <td>
-                          <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionDMR"
-                            onkeyup="calculateCommision('numberOfTransactionDMR','spanDMR','resultDMR');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
-                        </td>
-                        <td>
-                          <span>₹</span>
-                          <span id="spanDMR">15</span>
-                        </td>
-                        <td id="resultDMR"></td>
-                      </tr>
-                      <tr>
-                        <td width="50%">Airline Tickets</td>
-                        <td>₹5000</td>
-                        <td>
-                          <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionAT"
-                            onkeyup="calculateCommision('numberOfTransactionAT','spanAT','resultAT');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
-                        </td>
-                        <td>
-                          <span>₹</span>
-                          <span id="spanAT">0.25</span>
-                        </td>
-                        <td id="resultAT"></td>
-
-                      </tr>
-                      <tr>
-                        <td width="50%">BBPS</td>
-                        <td>₹50</td>
-                        <td>
-                          <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionBBPS"
-                            onkeyup="calculateCommision('numberOfTransactionBBPS','spanBBPS','resultBBPS');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
-                        </td>
-                        <td>
-                          <span>₹</span>
-                          <span id="spanBBPS">10</span>
-                        </td>
-                        <td id="resultBBPS"></td>
-                      </tr>
-                      <tr>
-                        <td width="50%">Pan card </td>
-                        <td>₹4</td>
-                        <td>
-                          <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionPC"
-                            onkeyup="calculateCommision('numberOfTransactionPC','spanPC','resultPC');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
-                        </td>
-                        <td>
-                          <span>₹</span>
-                          <span id="spanPC">7</span>
-                        </td>
-                        <td id="resultPC"></td>
-                      </tr>
-                      <tr>
-                        <td width="50%">Mobile &amp; DTH Rrecharge</td>
-                        <td>₹500</td>
-                        <td>
-                          <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionMDR"
-                            onkeyup="calculateCommision('numberOfTransactionMDR','spanMDR','resultMDR');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
-                        </td>
-                        <td>
-                          <span>₹</span>
-                          <span id="spanMDR">300</span>
-                        </td>
-                        <td id="resultMDR"></td>
-                      </tr>
-                      <td width="50%">CreditCard Bill Payment</td>
-                      <td>₹2000</td>
-                      <td>
-                        <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionCBP"
-                          onkeyup="calculateCommision('numberOfTransactionCBP','spanCBP','resultCBP');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
-                      </td>
-                      <td>
-                        <span>₹</span>
-                        <span id="spanCBP">1</span>
-                      </td>
-                      <td id="resultCBP"></td>
-                      </tr>
-
-                    </table>
-                  
-
-                </div>
-                <div class="col-md-4">
-                  
-                  <table style="width:100% ;margin-top: 13%; font-weight: 400;font-size: 10px;">
-                    <tr>
-                      <!-- <td style="padding: 4%; font-weight: 700;">Total GTV  <span style="margin-left: 40%;"> ₹1,23,95,750</span></th> -->
-                      <!-- <th>1,23,95,750</th> -->
-                    </tr>
-                    <tr>
-                      <td style="padding: 4%;font-weight: 700;">
-                        Total Commission : ₹
-                        <span id="totalIncomeDaily">0</span>/day
-                      </td>
-
-                      <!-- </tr> -->
-                    <tr>
-                      <td style="padding: 4%;font-weight: 700;">
-                        Total Commission : ₹
-                        <span id="totalIncomeMonthly">0</span>/month
-                      </td>
-                      <!-- </tr> -->
-                    <tr style="border: none;">
-                      <td style="padding: 4%;font-weight: 700;">
-                        Total Commission : ₹
-                        <span id="totalIncomeYearly">0</span>/year
-                      </td>
-                      <!-- </tr> -->
-                  </table>
-
-                  
-                </div>
-                <input type="button" id="configreset" value="Reset" onclick="RestValue()"
-                style="background-color: #0FA4C4;width: 15%; margin-left: 80%;color: white;border: white;">
-                <!-- </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div> -->
-              </div>
-            </div>
-          </div>
-        
-         
-        </div>
-        
-  </main><!-- End #main -->
-
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright">
-        <div class="row">
-          <div class="col-md-6">
-            <span>&copy; 2018 - 2022 Transaction Solution International (India) Pvt Ltd. All Rights Reserved.</span>
-
-          </div>
-          <div class="col-md-6">
-            <ul style="display: inline;margin-left: 30%;">
-
-              <li><a class="scrollto text-white" href="#hero">HOME</a> | </li>
-              <!-- <li><a class="scrollto text-white" href="#about">ABOUT US</a> |</li> -->
-              <!-- <li><a class="nscrollto text-white" href="#contact-main">CONTACT</a> |</li> -->
-              <li><a class="scrollto text-white" href="#">PRIVACY POLICY</a> | </li>
-              <li><a class="scrollto text-white" href="#">TERMS OF USE</a> | </li>
-              <li><a class="scrollto text-white" href="#">SECURITY</a> </li>
+            <ul class="nav nav-tabs row gy-4 d-flex">
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-1">
+            <!-- <i class="bi bi-binoculars color-cyan"></i> -->
+            <img src="assets/images/AePS (5).png" style="width: 100%;">
+            <h4 style="font-size: 14px;">AePS</h4>
+            </a>
+            </li><!-- End Tab 1 Nav -->
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+            <!-- <i class="bi bi-box-seam color-indigo"></i> -->
+            <img src="assets/images/DMT (4).png" style="width: 100%;">
+            <h4 style="font-size: 14px;">DMT</h4>
+            </a>
+            </li><!-- End Tab 2 Nav -->
+            <!-- End Tab 3 Nav -->
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+            <!-- <i class="bi bi-command color-red"></i> -->
+            <img src="assets/images/INMT (1).png" style="width: 100%;">
+            <h4 style="font-size: 14px;">INMT</h4>
+            </a>
+            </li><!-- End Tab 4 Nav -->
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
+            <!-- <i class="bi bi-easel color-blue"></i> -->
+            <img src="assets/images/BBPS (4).png" style="width: 100%;">
+            <h4 style="font-size: 14px;">BBPS</h4>
+            </a>
+            </li><!-- End Tab 5 Nav -->
             </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-
-
-  <!--------------Forgat Password Modal---------------------->
-
-
-  <div class="modal fade right" id="forgetPasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true" data-backdrop="false">
-    <div class="modal-dialog modal-full-height modal-right modal-notify modal-success" role="document">
-      <!--Content-->
-      <div class="modal-content">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
-          style=" margin-top: 4%;margin-left:90%;"><span aria-hidden="true">&times;</span></button>
-        <!--Header-->
-        <div class="modal-header" style="background-color: white; box-shadow: none;">
-        </div>
-        <!--Body-->
-        <div class="modal-body">
-          <div class="text-center">
-
-            <div class="text-center">
-
-              <h2 style="margin-top: -20%; color:black; ">Forgot Password</h2>
-              <p style="color: black; font-size: medium;font-weight: 500;"> Reset your password by entering the
-                information below
-              </p>
-              <!-- <label data-error="wrong" data-success="right" for="form3">Your name</label> -->
-              <input type="text" id="form3" class="form-control validate" placeholder="Agent ID"
-                style="margin-top: 10%;height:50px;" onkeypress="return ValidateMobile(mailmob)" required><br>
-              <input type="Email" id="form3" class="form-control validate" placeholder="Email" style="height:50px;"
-                onkeypress="return ValidateMobile(mailmob)" required><br>
-              <!-- <label data-error="wrong" data-success="right" for="form3">Your name</label> -->
-              <input type="number" id="form3" class="form-control validate" placeholder="Mobile No."
-                style="margin-top: -1%;height: 50px;">
-
-
-              <button type="button" class="btn btn" style="margin-top: 10%;
-              width: 50%; height: 50px; background-color:#0FA4C4; color: white;">Continue</button>
-
-
             </div>
-
-
-
-          </div>
-
-
-
-
-        </div>
-
-
+            </div>
+            <div class="row">
+            <div class="col-12 cash">
+            <ul class="nav nav-tabs row gy-4 d-flex">
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-1">
+            <!-- <i class="bi bi-binoculars color-cyan"></i> -->
+            <img src="assets/images/Cash-drop (1).png" style="width: 100%;">
+            <h4 style="font-size: 14px;">Cash Drop</h4>
+            </a>
+            </li><!-- End Tab 1 Nav -->
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+            <!-- <i class="bi bi-box-seam color-indigo"></i> -->
+            <img src="assets/images/PAN (3).png" style="width: 100%;">
+            <h4 style="font-size: 14px;"> Pan Card</h4>
+            </a>
+            </li><!-- End Tab 2 Nav -->
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+            <!-- <i class="bi bi-brightness-high color-teal"></i> -->
+            <img src="assets/images/Train (1).png" style="width: 100%;">
+            <h4 style="font-size: 14px;">Train Booking</h4>
+            </a>
+            </li><!-- End Tab 3 Nav -->
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+            <!-- <i class="bi bi-command color-red"></i> -->
+            <img src="assets/images/Flight (1).png" style="width: 100%;">
+            <h4 style="font-size: 14px;">Flight Booking</h4>
+            </a>
+            </li><!-- End Tab 4 Nav -->
+            </ul>
+            </div>
+            </div>
+            <div class="row" data-aos="fade-up">
+            <div class="col-12 policy">
+            <ul class="nav nav-tabs row gy-4 d-flex">
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-1">
+            <!-- <i class="bi bi-binoculars color-cyan"></i> -->
+            <img class="wimg" src="assets/images/Insurance (3).png">
+            <h4 style="font-size: 14px;">Insurance Policy</h4>
+            </a>
+            </li><!-- End Tab 1 Nav -->
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+            <!-- <i class="bi bi-box-seam color-indigo"></i> -->
+            <img class="wimg" src="assets/images/Hotels.png">
+            <h4 style="font-size: 14px;">Hotel Booking</h4>
+            </a>
+            </li><!-- End Tab 2 Nav -->
+            <li class="nav-item col-6 col-md-4 col-lg-2">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+            <!-- <i class="bi bi-brightness-high color-teal"></i> -->
+            <img class="wimg" src="assets/images/cc.png">
+            <h4 style="font-size: 14px;margin-left: 27px;">Credit Card Payment</h4>
+            </a>
+            </li><!-- End Tab 3 Nav -->
+            </ul>
+            </div>
+            </div>
+            </div>
+            </section>
+         </section>
+         <section id="section_why" style="margin-top: -4%;">
+         <section id="section_why_1" style="margin-top: -4%;" >
+         <div class="row">
+         <div class="col-md-12">
+         <img src="./assets/images/I6 (3).png" class="center">
+         <a class="learnmore" href="https://tsiplc.com/">Learn More</a>
+         <div class="why mor">
+         <div id="container" style="white-space:nowrap ;margin-left: 35%;">
+         <!-- <div id="texts"
+            style="display:inline; white-space:nowrap; font-size: 35px; font-weight: 650;color:#1A2851">
+            WHY
+            </div> -->
+         <div id="image" style="display:inline;">
+         <img src="./assets/images/Why-Findipay.png" width="70%">
+         </div>
+         <!-- <div> <span> WHY</span> <img src="assets/images/FindiPay Logo_TEAL.jpg" alt=""
+            width="200px" style="margin-top: -1.4%;margin-left: 1%;"></span>
+            </div> -->
+         </div>
+         </div>
+         <div class="text-center" id="smpp"> <button type="button" class="btn joinbtn Us"
+            style="background-color:#E31E24; color: white;">Sign Up</button>
+         <span style="font-weight: 600;margin-left: 2%;">Interested? Click the<span style="color:#E31E24;"> 'Sign Up'
+         </span> button to get started</span>
+         </div>
+         </div>
+         </div>
+         </section>
+         <section id="ervices" class="ervices section-bg" style="margin-top: -4%;">
+         <div class="container">
+         <div class="ection-title">
+         <div id="container" style="white-space:nowrap ; margin-left: 30%;">
+         <div id="texts"
+            style="display:inline; white-space:nowrap; font:size 50px;; font-weight: 650;color:#02A8C6; margin-top: 3%;">
+         WHY
+         </div>
+         <div id="image" style="display:inline;">
+         <img src="./assets/images/FindiPay Logo_TEAL.jpg" width="35%">
+         </div>
+         <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+         </div>
+         <div class="row" style="margin-top: 5%;">
+         <div class="col-lg-4 col-md-6 ">
+         <img src="./assets/images/c1.png" width="90%">
+         </div>
+         <div class="col-lg-4 col-md-6">
+         <img src="./assets/images/c2.png" width="90%">
+         </div>
+         <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
+         <img src="./assets/images/c3 (1).png" width="90%">
+         </div>
+         <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
+         <img src="./assets/images/c4.png" width="90%">
+         </div>
+         <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
+         <img src="./assets/images/c5 (1).png" width="90%">
+         </div>
+         <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
+         <img src="./assets/images/c6.png" width="90%">
+         <a class="Lnmore" href="https://tsiplc.com/">Learn More</a>
+         </div>
+         </div>
+         </div>
+         <div class="text-center"> <button type="button" class="btn btn- joinbtn"
+            style="background-color:#E31E24; color: white;">Sign Up</button>
+         <span style="font-weight: 600;margin-left: 2%;">Interested? Click the<span style="color:#E31E24;"> 'Sign Up'
+         </span> button to get started</span>
+         </div>
+         </div>
+         </section><!-- End Services Section -->
+         <section id="clients" class="clients" style="min-height:400px;margin-top: -4%;">
+         <div class="container" data-aos="fade-up">
+         <header class="section-header">
+         <h5 class="top-title">TRUSTED BY</h5>
+         </header>
+         <div class="clients-slider swiper1" style="overflow:unset; padding-left: 20px;padding-right: 10px;">
+         <div class="swiper-wrapper align-items-center">
+         <div class="swiper-slide"><img src="assets/images/PNB.png" class="img-fluid" alt="" height="100%"></div>
+         <div class="swiper-slide"><img src="assets/images/BBPS (1).png" class="img-fluid" alt="" height="100%">
+         </div>
+         <!-- <div class="swiper-slide"><img src="assets/images/Fastag (1).png" class="img-fluid" alt=""></div> -->
+         <div class="swiper-slide"><img src="assets/images/Prabhu.png" class="img-fluid" alt="" height="100%">
+         </div>
+         <div class="swiper-slide"><img src="assets/images/HDFC.png" class="img-fluid" alt="" height="100%"></div>
+         <div class="swiper-slide"><img src="assets/images/yatra.png" class="img-fluid" alt="" height="100%"></div>
+         <div class="swiper-slide"><img src="assets/images/icici.png" class="img-fluid" alt="" height="100%"></div>
+         <div class="swiper-slide"><img src="assets/images/cashfree (1).png" class="img-fluid" alt="" height="100%">
+         </div>
+         <div class="swiper-slide"><img src="assets/images/sbi.png" class="img-fluid" alt="" height="100%"></div>
+         <div class="swiper-slide"><img src="assets/images/UTI.png" class="img-fluid" alt="" height="100%"></div>
+         <div class="swiper-slide"><img src="assets/images/Razorpay.png" class="img-fluid" alt="" height="100%">
+         </div>
+         <div class="swiper-slide"><img src="assets/images/Qwickcilver.png" class="img-fluid" alt="" height="100%">
+         </div>
+         <div class="swiper-slide"><img src="assets/images/Paysprint.png" class="img-fluid" alt="" height="100%">
+         </div>
+         <div class="swiper-slide"><img src="assets/images/Fing-pay.png" class="img-fluid" alt="" height="100%">
+         </div>
+         </div>
+         <!-- <div class="swiper-pagination"></div> -->
+         </div>
+         </div>
+         </section><!-- End Clients Section -->
+         <section id="about-section" class="parallax" data-stellar-background-ratio="0.5"
+            style="background-position: 0% -125.667px;margin-top: -4%;">
+         <div class="page-header-wrapper">
+         <div class="container">
+         <div class="wow fadeIn animated" data-wow-delay="1s" style="visibility: visible; animation-delay: 1s;">
+         <!-- <span class="center-border-line" style="margin-top: -38px;background-color: #fff;"></span> -->
+         </div>
+         <div class="container" data-aos="fade-up">
+         <div class="row">
+         <header class="section-header text-white">
+         <!-- <h5 CLASS="top-title">PARENT COMPANY</h> -->
+         <h1 class="col-12">Transaction Solutions International (TSI)</h1>
+         <p class="col-10" style="margin-left: 6%; text-align: center;">Incorporated in 2005, TSI specializes
+         in
+         creating and
+         executing
+         transaction
+         payment solutions for Banks, Financial Institutions and Utility companies. TSI also
+         provides financial institutions with its in-house technology solutions such as
+         Electronic Surveillance, Power Management, Payments Marketplace, and Loyalty
+         Rewards offerings.</p>
+         </header>
+         </div>
+         <div class="row about_row " data-wow-delay="0.3s">
+         <div class="col-sm-3 wow fadeIn animated" data-wow-delay="1s"
+            style="visibility: visible; animation-delay: 1s;">
+         <!--  <a class="page-scroll" href="#strategy-section"> -->
+         <div class="text-center image_center shadow_cs">
+         <img class="img-responsive" src="assets/images/Processing.png" style="width: 100%; height:100%;">
+         </div>
+         <!-- 550+ million -->
+         <h4 class="features-title2 ">
+         <span class="u378-3 "><sup style="font-size:16px; position: relative;
+            top: -17px;left: 5px;"></sup>₹1.5 <sup style="font-size:24px;"></sup><span class="u378-5">
+         Trillion
+         </span></span>
+         <div class="u379-4" style="width:70%;">
+         <p class="removepadding_margin" style="text-align: center;">Processed per year </p>
+         </div>
+         </h4>
+         <!-- </a> -->
+         </div>
+         <div class="col-sm-3 wow fadeIn  animated" data-wow-delay="1.5s"
+            style="visibility: visible; animation-delay: 1.5s;">
+         <!--  <a class="page-scroll" href="#portfolio-section"> -->
+         <div class="text-center image_center shadow_cs">
+         <img class="img-responsive" src="assets/images/Transaction.png" style="width: 100%; height:100%;">
+         </div>
+         <h4 class="features-title2 ">
+         <span class="u378-3 ">550+<span class="u378-5">  Million </span></span>
+         <div class="u379-4">
+         <p class="removepadding_margin">Transactions per year</p>
+         </div>
+         </h4>
+         <!--  </a> -->
+         </div>
+         <div class="col-sm-3 wow fadeIn animated" data-wow-delay="2s"
+            style="visibility: visible; animation-delay: 2s;">
+         <!--   <a class="page-scroll" href="#team-section"> -->
+         <div class="text-center image_center shadow_cs">
+         <img class="img-responsive" src="assets/images/institution.png" style="width: 100%; height:100%;">
+         </div>
+         <h4 class="features-title2 ">
+         <span class="u378-3 ">40+ </span>
+         <div class="u379-4">
+         <p class="removepadding_margin">Institutions serviced</p>
+         </div>
+         </h4>
+         <!--  </a> -->
+         </div>
+         <div class="col-sm-3 wow fadeIn animated" data-wow-delay="2.5s"
+            style="visibility: visible; animation-delay: 2.5s;">
+         <!--   <a class="page-scroll" href="#team-section"> -->
+         <div class="text-center image_center shadow_cs">
+         <img class="img-responsive" src="assets/images/Staaa.png" style="width: 100%; height:100%;">
+         </div>
+         <h4 class="features-title2 ">
+         <span class="u378-3 ">20+ <span class="u378-5">States</span></span>
+         <div class="u379-4">
+         <p class="removepadding_margin">Pan India Operations </p>
+         </div>
+         </h4>
+         <!--  </a> -->
+         </div>
+         </div>
+         </div>
+         </div>
+         <!-- </section> -->
+         </div>
+         </section>
+         <!-- remove Testimonials Section -->
+         </section>
+         <!-- ======= Pricing Section ======= -->
+         <section id="contact-main" style="margin-top: -4%;">
+         <section class="contact-main" style="margin-top: -4%;">
+         <div class="container" data-aos="fade-up">
+         <div class="row p-5">
+         <div class="col-md-12 contact-tile">
+         <div class="row text-center pt-5">
+         <!-- <h5 class="top-title mt-5">CONTACT US</h5> -->
+         <H1 class="mt-3" style="color: #1A2851; font-size: 40px;">LAUNCH YOUR DIGITAL STORE TODAY!</H1>
+         <p style="font-size: 20px; font-weight:400;">Interested in becoming a FindiPay partner?<br> Send us your
+         details today in the form below!</p>
+         </div>
+         <div class="row">
+         <div class="col-md-1"></div>
+         <div class="col-md-10" data-aos="fade-up">
+         <div class="row form-tile">
+         <div class="col-lg-12" id="form">
+         <form action="forms/contact.php" action="" method="post" class="php-email-form needs-validation">
+         <div class="row gy-4" style="margin-top:-10%;">
+         <div class="col-md-6">
+         <input type="text" name="name" id="firstName" class="form-control" placeholder="Full Name"
+            onkeypress="return lettersOnly(event)">
+         <div class="error" id="firstNameError"></div>
+         </div>
+         <div class="col-md-6 ">
+         <input type="email" class="form-control" id="email" name="email" placeholder="Your Email"
+            onblur="validateEmail(this);">
+         <div class="error" id="emailError"></div>
+         </div>
+         <div class="col-md-6">
+         <input type="text" class="form-control" id="mobileNumber" name="mobile"
+            placeholder="Mobile.no" onkeypress="return validateNumber(event)">
+         <div class="error" id="mobileNumberError"></div>
+         </div>
+         <div class="col-md-6">
+         <input type="text" class="form-control" id="pinCode" name="pincode" placeholder="Pincode"
+            maxlength="6" onkeypress="return validateNumber(event)">
+         <div class="error" id="pinCodeError"></div>
+         </div>
+         <div class="col-md-12">
+         <textarea class="form-control" id="message"
+            style="resize: none;padding-top: 20px;padding-left: 15px" name="message" rows="6"
+            placeholder="Message"></textarea>
+         <div class="error" id="messageError"></div>
+         </div>
+         <div class="col-md-12 text-center">
+         <div class="loading">Loading</div>
+         <div class="error-message"></div>
+         <div class="sent-message">Your message has been sent. Thank you!</div>
+         <button type="button" id="submitButton" class="animated-button">Submit</button>
+         </div>
+         </div>
+         </form>
+         </div>
+         </div>
+         </div>
+         <div class="col-md-1"></div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </section><!-- End Pricing Section -->
+         <section style="margin-top: -4%;">
+         <div class="card contus">
+         <div class="card-body">
+         <h5 class="card-title text-center"
+            style="font-size: 40px; font-weight: 700;color: rgb(9, 44, 91); margin-top:4%;">CONTACT US
+         </h5>
+         <div class="row">
+         <div class="col-lg-6"> <img src="./assets/images/I7.png" width="90%">
+         </div>
+         <div class="col-lg-6">
+         <div class="contact-detail" style="margin-top:4%;">
+         <img src="./assets/images/location-8.png" alt="Phone Icon" height="40px" width="40px" />
+         <h5 style="display: inline;font-weight: 400;
+            font-style: normal;
+            color: rgb(9, 44, 91); margin-left: 2%;">316, DLF Prime Tower, Okhla Phase 1<br>
+         <span style="margin-left: 11%;">New Delhi-110020</span>
+         </h5>
+         </div>
+         <div class=" contact-detail" style="margin-top: 4%;">
+         <img src="./assets/images/Website-8.png" alt="Phone Icon" height="40px" width="40px" />
+         <h5 style="display: inline;font-weight: 400;
+            font-style: normal;
+            color: rgb(9, 44, 91);margin-left: 2%;">www.findipay.in</h5>
+         </div>
+         <div class=" contact-detail" style="margin-top: 4%;">
+         <img src="./assets/images/email-8.png" alt="Phone Icon" height="40px" width="40px" />
+         <h5 style="display: inline;font-weight: 400;
+            font-style: normal;
+            color: rgb(9, 44, 91);margin-left: 2%;">contact@findipay.in</h5>
+         </div>
+         <div class="contact-detail" style="margin-top: 4%;">
+         <img src="./assets/images/Phone-8.png" alt="Phone Icon" height="40px" width="40px" />
+         <h5 style="display: inline;font-weight: 400;
+            font-style: normal;
+            color: rgb(9, 44, 91);margin-left: 2%;">1800-121-447777</h5>
+         </div>
+         <div>
+         <p style="font-weight: 700;
+            font-style: italic;
+            color: rgb(9, 44, 91);
+            text-decoration: none; margin-top:5%;"> Also find us on our social media platform</p>
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </section>
+         </section>
+         <!-- Button trigger modal -->
+         <button type="button" class="btn btn Us " data-toggle="modal" data-target="#exampleModal" style="position: fixed;
+            bottom: 50px;
+            right: 9px; background-color: #0FA4C4; color: white;">
+            <!-- <i class="bi bi-calculator"></i> -->
+            Income calculator
+         </button>
+         <!-- Modal -->
+         <div class="modal fade right" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+         <div class="modal-dialog modal-xl" role="document">
+         <div class="modal-content">
+            <div>
+               <!-- class/modal-header" -->
+               <!-- <h5 class="modal-title" id="exampleModalLabel"></h5> -->
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true" style="margin-right: 20px; margin-top: 10%;">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="row">
+                  <a class="home-link" href="index.html" title="Mobisafar" rel="home">
+                  <img id="logo-img" class="img-center" src="assets/images/FindiPay Logo_TEAL.jpg" alt="logo-img"
+                     style="width: 150px; margin: auto; display: block; margin-bottom: 10px;">
+                  </a>
+                  <p style="margin: 0; color: #000; text-align: center; font-weight: 500; margin-bottom: 10px;">Calculate
+                     Your Income
+                  </p>
+                  <div class="row">
+                     <div class="col-md-8">
+                        <form id="configform">
+                        <table class="noBorder" id="incomeCal">
+                           <tr class="noBorder"
+                              style="background: #c10c0c; color:white; font-weight:300 !important; font-size:14px;">
+                              <th>USP</th>
+                              <th>Avg.tkt size</th>
+                              <th>No of Txn.</th>
+                              <th> Commission per Txn </th>
+                              <th> Commission earned per day </th>
+                           </tr>
+                           <tr>
+                              <td>Domestic Money Transfer</td>
+                              <td>₹2000</td>
+                              <td>
+                                 <input style="width:90px; text-align: center;" type="text" id="numberOfTransactionDMT"
+                                    onkeyup="calculateCommision('numberOfTransactionDMT','spanDMT','resultDMT');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6" />
+                              </td>
+                              <td id="secondNumber">
+                                 <span>₹</span>
+                                 <span id="spanDMT">5</span>
+                              </td>
+                              <td id="resultDMT"></td>
+                           </tr>
+                           <tr>
+                              <td>Aadhar Pay(AePS)</td>
+                              <td>₹1000</td>
+                              <td>
+                                 <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionAEPS"
+                                    onkeyup="calculateCommision('numberOfTransactionAEPS','spanAEPS','resultAEPS');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
+                              </td>
+                              <td>
+                                 <span>₹</span>
+                                 <span id="spanAEPS">10</span>
+                              </td>
+                              <td id="resultAEPS"></td>
+                           </tr>
+                           <tr>
+                              <td width="50%"> Indo Nepal Money Transfer</td>
+                              <td>₹100</td>
+                              <td>
+                                 <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionINMT"
+                                    onkeyup="calculateCommision('numberOfTransactionINMT','spanINMT','resultINMT');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
+                              </td>
+                              <td>
+                                 <span>₹</span>
+                                 <span id="spanINMT">3</span>
+                              </td>
+                              <td id="resultINMT"></td>
+                           </tr>
+                           <tr>
+                              <td width="50%">Domestic Money Remittance</td>
+                              <td>₹1500</td>
+                              <td>
+                                 <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionDMR"
+                                    onkeyup="calculateCommision('numberOfTransactionDMR','spanDMR','resultDMR');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
+                              </td>
+                              <td>
+                                 <span>₹</span>
+                                 <span id="spanDMR">15</span>
+                              </td>
+                              <td id="resultDMR"></td>
+                           </tr>
+                           <tr>
+                              <td width="50%">Airline Tickets</td>
+                              <td>₹5000</td>
+                              <td>
+                                 <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionAT"
+                                    onkeyup="calculateCommision('numberOfTransactionAT','spanAT','resultAT');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
+                              </td>
+                              <td>
+                                 <span>₹</span>
+                                 <span id="spanAT">0.25</span>
+                              </td>
+                              <td id="resultAT"></td>
+                           </tr>
+                           <tr>
+                              <td width="50%">BBPS</td>
+                              <td>₹50</td>
+                              <td>
+                                 <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionBBPS"
+                                    onkeyup="calculateCommision('numberOfTransactionBBPS','spanBBPS','resultBBPS');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
+                              </td>
+                              <td>
+                                 <span>₹</span>
+                                 <span id="spanBBPS">10</span>
+                              </td>
+                              <td id="resultBBPS"></td>
+                           </tr>
+                           <tr>
+                              <td width="50%">Pan card </td>
+                              <td>₹4</td>
+                              <td>
+                                 <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionPC"
+                                    onkeyup="calculateCommision('numberOfTransactionPC','spanPC','resultPC');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
+                              </td>
+                              <td>
+                                 <span>₹</span>
+                                 <span id="spanPC">7</span>
+                              </td>
+                              <td id="resultPC"></td>
+                           </tr>
+                           <tr>
+                              <td width="50%">Mobile &amp; DTH Rrecharge</td>
+                              <td>₹500</td>
+                              <td>
+                                 <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionMDR"
+                                    onkeyup="calculateCommision('numberOfTransactionMDR','spanMDR','resultMDR');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
+                              </td>
+                              <td>
+                                 <span>₹</span>
+                                 <span id="spanMDR">300</span>
+                              </td>
+                              <td id="resultMDR"></td>
+                           </tr>
+                           <td width="50%">CreditCard Bill Payment</td>
+                           <td>₹2000</td>
+                           <td>
+                              <input style="width: 90px;text-align: center" type="text" id="numberOfTransactionCBP"
+                                 onkeyup="calculateCommision('numberOfTransactionCBP','spanCBP','resultCBP');calculateIncome();"onkeypress="return isNumber(event)"maxlength="6"></input>
+                           </td>
+                           <td>
+                              <span>₹</span>
+                              <span id="spanCBP">1</span>
+                           </td>
+                           <td id="resultCBP"></td>
+                           </tr>
+                        </table>
+                     </div>
+                     <div class="col-md-4">
+                        <table style="width:100% ;margin-top: 13%; font-weight: 400;font-size: 10px;">
+                           <tr>
+                              <!-- <td style="padding: 4%; font-weight: 700;">Total GTV  <span style="margin-left: 40%;"> ₹1,23,95,750</span></th> -->
+                              <!-- <th>1,23,95,750</th> -->
+                           </tr>
+                           <tr>
+                              <td style="padding: 4%;font-weight: 700;">
+                                 Total Commission : ₹
+                                 <span id="totalIncomeDaily">0</span>/day
+                              </td>
+                              <!-- </tr> -->
+                           <tr>
+                              <td style="padding: 4%;font-weight: 700;">
+                                 Total Commission : ₹
+                                 <span id="totalIncomeMonthly">0</span>/month
+                              </td>
+                              <!-- </tr> -->
+                           <tr style="border: none;">
+                              <td style="padding: 4%;font-weight: 700;">
+                                 Total Commission : ₹
+                                 <span id="totalIncomeYearly">0</span>/year
+                              </td>
+                              <!-- </tr> -->
+                        </table>
+                     </div>
+                     <input type="button" id="configreset" value="Reset" onclick="RestValue()"
+                        style="background-color: #0FA4C4;width: 15%; margin-left: 80%;color: white;border: white;">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+      <!-- End #main -->
+      <!-- ======= Footer ======= -->
+      <footer id="footer" class="footer">
+         <div class="container">
+            <div class="copyright">
+               <div class="row">
+                  <div class="col-md-6">
+                     <span>&copy; 2018 - 2022 Transaction Solution International (India) Pvt Ltd. All Rights Reserved.</span>
+                  </div>
+                  <div class="col-md-6">
+                     <ul style="display: inline;margin-left: 30%;">
+                        <li><a class="scrollto text-white" href="#hero">HOME</a> | </li>
+                        <!-- <li><a class="scrollto text-white" href="#about">ABOUT US</a> |</li> -->
+                        <!-- <li><a class="nscrollto text-white" href="#contact-main">CONTACT</a> |</li> -->
+                        <li><a class="scrollto text-white" href="#">PRIVACY POLICY</a> | </li>
+                        <li><a class="scrollto text-white" href="#">TERMS OF USE</a> | </li>
+                        <li><a class="scrollto text-white" href="#">SECURITY</a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- End Footer -->
+      <!--------------Forgat Password Modal---------------------->
+      <div class="modal fade right" id="forgetPasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true" data-backdrop="false">
+         <div class="modal-dialog modal-full-height modal-right modal-notify modal-success" role="document">
+            <!--Content-->
+            <div class="modal-content">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                  style=" margin-top: 4%;margin-left:90%;"><span aria-hidden="true">&times;</span></button>
+               <!--Header-->
+               <div class="modal-header" style="background-color: white; box-shadow: none;">
+               </div>
+               <!--Body-->
+               <div class="modal-body">
+                  <div class="text-center">
+                     <div class="text-center">
+                        <h2 style="margin-top: -20%; color:black; ">Forgot Password</h2>
+                        <p style="color: black; font-size: medium;font-weight: 500;"> Reset your password by entering the
+                           information below
+                        </p>
+                        <input type="text" id="txtAgentId" class="form-control validate" placeholder="Agent ID"
+                           style="margin-top: 10%;height:50px;" onkeypress="return ValidateMobile(mailmob)" required><br>
+                        <input type="Email" id="txtEmail" class="form-control validate" placeholder="Email" style="height:50px;"
+                           onkeypress="return ValidateMobile(mailmob)" required><br>
+                        <!-- <label data-error="wrong" data-success="right" for="form3">Your name</label> -->
+                        <input type="number" id="txtMobile" class="form-control validate" placeholder="Mobile No."
+                           style="margin-top: -1%;height: 50px;">
+                        <button type="button" class="btn btn" style="margin-top: 10%;
+                           width: 50%; height: 50px; background-color:#0FA4C4; color: white;">Continue</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-
-    </div>
-  </div>
-
-  <!--------------End Forgot password Modal------------------>
-
-
-
-
-
-
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-
-
-
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-
-  <!-- Template Main JS File -->
-  <script src='https://www.google.com/recaptcha/api.js'></script>
-  <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
-  <script src="assets/js/main.js"></script>
-  <script type="text/javascript"
-    src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/bundles/4.20.0/compiled.min.js"></script>
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $('#sign-up').click(function () {
-        $("#fluidModalRightSuccessDemo").css("padding-right", "0");
-        $("#fluidModalRightSuccessDemo").css("display", "none");
-        // $("#fluidModalRightSuccessDemo").modal("hide");
-        // id="modalwindow"
-        //$('#fluidModalRightSuccessDemo').modal('hide');
-      })
-    });
-
-    $('#joinUs').click(function () {
-      document.getElementById('contact-main').scrollIntoView({
-        behavior: "smooth"
-      });
-      $("#firstName").focus();
-    });
-
-    $('#Us').click(function () {
-      document.getElementById('contact-main').scrollIntoView({
-        behavior: "smooth"
-      })
-    });
-    $('#bttnn').click(function () {
-      document.getElementById('contact-main').scrollIntoView({
-        behavior: "smooth"
-      })
-    });
-    $('#smpp').click(function () {
-      document.getElementById('contact-main').scrollIntoView({
-        behavior: "smooth"
-      })
-    });
-    $('#shgh').click(function () {
-      document.getElementById('contact-main').scrollIntoView({
-        behavior: "smooth"
-      })
-    });
-
-    function calculateCommision(notControlId, cptControlId, outputId) {
-      $("#" + outputId).html(parseFloat($("#" + notControlId).val()) * parseFloat($("#" + cptControlId).text()));
-      //alert(tes);
-      //var totalsum= parseFloat($("#totalday").text());
-    }
-
-    function calculateIncome() {
-      let totalIncomeDaily = (parseFloat($('#resultDMT').html()) || 0) + (parseFloat($('#resultAEPS').html()) || 0)
-        + (parseFloat($('#resultINMT').html()) || 0) + (parseFloat($('#resultDMR').html()) || 0) + (parseFloat($('#resultAT').html()) || 0) +
-        (parseFloat($('#resultBBPS').html()) || 0) + (parseFloat($('#resultPC').html()) || 0) + (parseFloat($('#resultMDR').html()) || 0) +
-        (parseFloat($('#resultCBP').html()) || 0);
-      let totalIncomeMonthly = totalIncomeDaily * 30;
-      let totalIncomeYearly = totalIncomeDaily * 365;
-      $("#totalIncomeDaily").html(totalIncomeDaily);
-      $("#totalIncomeMonthly").html(totalIncomeMonthly);
-      $("#totalIncomeYearly").html(totalIncomeYearly);
-    }
-
-    var modal = document.getElementById('fluidModalRightSuccessDemo');
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
-
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-
-      autoplay: {
-        delay: 5000,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-
-
-    });
-
-
-    //     $(window).load(function() {
-    //   $('.carousel-item').carousel-item({
-    //     animation: "slide",
-    //     animationLoop: "none",
-    //     itemWidth: 210,
-    //     itemMargin: 5
-    //   });
-    // });
-    (function () {
-      'use strict'
-
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.querySelectorAll('.needs-validation')
-
-      // Loop over them and prevent submission
-      Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-          form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-              event.preventDefault()
-              event.stopPropagation()
-            }
-
-            form.classList.add('was-validated')
-          }, false)
-        })
-    })()
-
-    function validateNumber(e) {
-
-      // Allow: backspace, delete, tab, escape and enter
-      if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
-        // Allow: Ctrl+A,Ctrl+C,Ctrl+V, Command+A
-        ((e.keyCode === 65 || e.keyCode === 86 || e.keyCode === 67) && (e.ctrlKey === true || e.metaKey === true)) ||
-        // Allow: home, end, left, right, down, up
-        (e.keyCode >= 35 && e.keyCode <= 40)) {
-        // let it happen, don't do anything
-        return;
-      }
-
-      // Ensure that it is a number and stop the keypress
-      if (([48, 49, 50, 51, 52, 53, 96, 97, 98, 99, 100, 101].indexOf(e.keyCode) !== -1 && e.target.value.length === 0)
-        || (e.shiftKey || (e.keyCode < 48 || e.keyCode > 57))
-        && (e.keyCode < 96 || e.keyCode > 105) || e.target.value.length > 9) {
-        e.preventDefault();
-      }
-      const pattern = /^[0-9]$/;
-
-      return pattern.test(e.key)
-
-    };
-    function lettersOnly() {
-      var charCode = event.keyCode;
-
-      if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8)
-
-        return true;
-      else
-        return false;
-
-
-    }
-    // function validateEmail(emailField) {
-    //   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
-    //   if (reg.test(emailField.value) == false) {
-    //     alert('Invalid Email Address');
-    //     return false;
-    //   }
-    //   return true;
-
-    // }
-
-
-
-
-    $(document).ready(function () {
-      $("#submitButton").click(function () {
-        var isValid = true;
-
-        // First Name
-        var firstName = $("#firstName").val();
-        if (firstName === "") {
-          $("#firstNameError").text("Please enter your first name.");
-          $("#firstName").focus();
-          isValid = false;
-        } else {
-          $("#firstNameError").text("");
-        }
-
-        // Email
-        var email = $("#email").val();
-        if (email === "") {
-          $("#emailError").text("Please enter your email.");
-          isValid = false;
-          $("#email").focus();
-        } else {
-          $("#emailError").text("");
-        }
-
-        // Mobile Number
-        var mobileNumber = $("#mobileNumber").val();
-        if (mobileNumber === "") {
-          $("#mobileNumberError").text("Please enter your mobile number.");
-          isValid = false;
-          $("#mobileNumber").focus();
-        } else {
-          $("#mobileNumberError").text("");
-        }
-
-        // Pin Code
-        var pinCode = $("#pinCode").val();
-        if (pinCode === "") {
-          $("#pinCodeError").text("Please enter your pin code.");
-          isValid = false;
-          $("#pinCode").focus();
-        } else {
-          $("#pinCodeError").text("");
-        }
-
-        // Message
-        var message = $("#message").val();
-        if (message === "") {
-          $("#messageError").text("Please enter your message.");
-          isValid = false;
-          $("#message").focus();
-        } else {
-          $("#messageError").text("");
-        }
-        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
-        if (reg.test($("#email").val().trim()) == false) {
-          $("#emailError").text("Invalid Email Address");
-          isValid = false;
-        }
-        else {
-          $("#emailError").text("");
-          isValid = true;
-        }
-        if (isValid) {
-          // Submit the form or perform other actions
-          alert("Form submitted successfully!");
-          $("#submitButton").submit();
-        }
-        $("#form input").each(function () {
-          var inputValue = $(this).val();
-          if (inputValue === null || inputValue === "") {
-            $(`#${$(this).attr("id")}`).focus();
-            return false; // Break out of the each loop
-          }
-        });
-
-      });
-      $("#btnLogin").click(function () {
-        var isValid = true;
-
-        // Email
-        var email = $("#mobileEmail").val();
-        if (email === "") {
-          $("#mobileEmailError").text("Please enter your Mobile/Email.");
-          isValid = false;
-        } else {
-          $("#mobileEmailError").text("");
-        }
-        var email = $("#password").val();
-        if (email === "") {
-          $("#passwordError").text("Please enter your Password.");
-          isValid = false;
-        } else {
-          $("#passwordError").text("");
-        }
-        if (isValid) {
-          // Submit the form or perform other actions
-          alert("Form submitted successfully!");
-          $("#btnLogin").submit();
-
-        }
-        $("#formLogin input").each(function () {
-          var inputValue = $(this).val();
-          if (inputValue === null || inputValue === "") {
-            $(`#${$(this).attr("id")}`).focus();
-            return false; // Break out of the each loop
-          }
-        });
-      });
-    });
-
-    function RestValue() {
-
-      $("#incomeCal tr").each(function(){
-        
-        $(this).find('td').eq(4).text('')
-      });
-      $("#totalIncomeDaily").html('');
-      $("#totalIncomeMonthly").html('');
-      $("#totalIncomeYearly").html('');
-      $('#configform')[0].reset();
-      
-    };
-
-    function isNumber(evt) {
-    evt = (evt) ? evt : window.event;
-    var charCode = (evt.which) ? evt.which : evt.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
-    }
-    return true;
-}
-
-
-
-  </script>
-
-
-</body>
-
-
+      <!--------------End Forgot password Modal------------------>
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+         class="bi bi-arrow-up-short"></i></a>
+      <!-- Vendor JS Files -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+      <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+      <script src="assets/vendor/aos/aos.js"></script>
+      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <!-- Template Main JS File -->
+      <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+      <script src="assets/js/main.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap4_docs-app_js_bundles_4.20.0_compiled.min.js"></script>
+      <!-- <script type="text/javascript"
+         src="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/js/bundles/4.20.0/compiled.min.js"></script>
+         </script> -->
+      <script>
+         $(document).ready(function () {
+           $('#sign-up').click(function () {
+             $("#fluidModalRightSuccessDemo").css("padding-right", "0");
+             $("#fluidModalRightSuccessDemo").css("display", "none");
+             // $("#fluidModalRightSuccessDemo").modal("hide");
+             // id="modalwindow"
+             //$('#fluidModalRightSuccessDemo').modal('hide');
+           })
+         });
+         
+         $('#joinUs').click(function () {
+           document.getElementById('contact-main').scrollIntoView({
+             behavior: "smooth"
+           });
+           $("#firstName").focus();
+         });
+         
+         $('#Us').click(function () {
+           document.getElementById('contact-main').scrollIntoView({
+             behavior: "smooth"
+           })
+         });
+         $('#bttnn').click(function () {
+           document.getElementById('contact-main').scrollIntoView({
+             behavior: "smooth"
+           })
+         });
+         $('#smpp').click(function () {
+           document.getElementById('contact-main').scrollIntoView({
+             behavior: "smooth"
+           })
+         });
+         $('#shgh').click(function () {
+           document.getElementById('contact-main').scrollIntoView({
+             behavior: "smooth"
+           })
+         });
+         
+         function calculateCommision(notControlId, cptControlId, outputId) {
+           $("#" + outputId).html(parseFloat($("#" + notControlId).val()) * parseFloat($("#" + cptControlId).text()));
+           //alert(tes);
+           //var totalsum= parseFloat($("#totalday").text());
+         }
+         
+         function calculateIncome() {
+           let totalIncomeDaily = (parseFloat($('#resultDMT').html()) || 0) + (parseFloat($('#resultAEPS').html()) || 0)
+             + (parseFloat($('#resultINMT').html()) || 0) + (parseFloat($('#resultDMR').html()) || 0) + (parseFloat($('#resultAT').html()) || 0) +
+             (parseFloat($('#resultBBPS').html()) || 0) + (parseFloat($('#resultPC').html()) || 0) + (parseFloat($('#resultMDR').html()) || 0) +
+             (parseFloat($('#resultCBP').html()) || 0);
+           let totalIncomeMonthly = totalIncomeDaily * 30;
+           let totalIncomeYearly = totalIncomeDaily * 365;
+           $("#totalIncomeDaily").html(totalIncomeDaily);
+           $("#totalIncomeMonthly").html(totalIncomeMonthly);
+           $("#totalIncomeYearly").html(totalIncomeYearly);
+         }
+         
+         var modal = document.getElementById('fluidModalRightSuccessDemo');
+         // When the user clicks anywhere outside of the modal, close it
+         window.onclick = function (event) {
+           if (event.target == modal) {
+             modal.style.display = "none";
+           }
+         }
+         
+         
+         const swiper = new Swiper('.swiper', {
+           slidesPerView: 1,
+           slidesPerGroup: 1,
+         
+           autoplay: {
+             delay: 5000,
+           },
+           pagination: {
+             el: '.swiper-pagination',
+           },
+           navigation: {
+             nextEl: '.swiper-button-next',
+             prevEl: '.swiper-button-prev',
+           },
+         
+         
+         });
+         (function () {
+           'use strict'
+         
+           // Fetch all the forms we want to apply custom Bootstrap validation styles to
+           var forms = document.querySelectorAll('.needs-validation')
+         
+           // Loop over them and prevent submission
+           Array.prototype.slice.call(forms)
+             .forEach(function (form) {
+               form.addEventListener('submit', function (event) {
+                 if (!form.checkValidity()) {
+                   event.preventDefault()
+                   event.stopPropagation()
+                 }
+         
+                 form.classList.add('was-validated')
+               }, false)
+             })
+         })()
+         
+         function validateNumber(e) {
+         
+           // Allow: backspace, delete, tab, escape and enter
+           if ($.inArray(e.keyCode, [46, 8, 9, 27, 13]) !== -1 ||
+             // Allow: Ctrl+A,Ctrl+C,Ctrl+V, Command+A
+             ((e.keyCode === 65 || e.keyCode === 86 || e.keyCode === 67) && (e.ctrlKey === true || e.metaKey === true)) ||
+             // Allow: home, end, left, right, down, up
+             (e.keyCode >= 35 && e.keyCode <= 40)) {
+             // let it happen, don't do anything
+             return;
+           }
+         
+           // Ensure that it is a number and stop the keypress
+           if (([48, 49, 50, 51, 52, 53, 96, 97, 98, 99, 100, 101].indexOf(e.keyCode) !== -1 && e.target.value.length === 0)
+             || (e.shiftKey || (e.keyCode < 48 || e.keyCode > 57))
+             && (e.keyCode < 96 || e.keyCode > 105) || e.target.value.length > 9) {
+             e.preventDefault();
+           }
+           const pattern = /^[0-9]$/;
+         
+           return pattern.test(e.key)
+         
+         };
+         function lettersOnly() {
+           var charCode = event.keyCode;
+         
+           if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8)
+         
+             return true;
+           else
+             return false;
+         
+         
+         }
+         
+         $(document).ready(function () {
+           $("#submitButton").click(function () {
+             var isValid = true;
+         
+             // First Name
+             var firstName = $("#firstName").val();
+             if (firstName === "") {
+               $("#firstNameError").text("Please enter your first name.");
+               $("#firstName").focus();
+               isValid = false;
+             } else {
+               $("#firstNameError").text("");
+             }
+         
+             // Email
+             var email = $("#email").val();
+             if (email === "") {
+               $("#emailError").text("Please enter your email.");
+               isValid = false;
+               $("#email").focus();
+             } else {
+               $("#emailError").text("");
+             }
+         
+             // Mobile Number
+             var mobileNumber = $("#mobileNumber").val();
+             if (mobileNumber === "") {
+               $("#mobileNumberError").text("Please enter your mobile number.");
+               isValid = false;
+               $("#mobileNumber").focus();
+             } else {
+               $("#mobileNumberError").text("");
+             }
+         
+             // Pin Code
+             var pinCode = $("#pinCode").val();
+             if (pinCode === "") {
+               $("#pinCodeError").text("Please enter your pin code.");
+               isValid = false;
+               $("#pinCode").focus();
+             } else {
+               $("#pinCodeError").text("");
+             }
+         
+             // Message
+             var message = $("#message").val();
+             if (message === "") {
+               $("#messageError").text("Please enter your message.");
+               isValid = false;
+               $("#message").focus();
+             } else {
+               $("#messageError").text("");
+             }
+             var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+         
+             if (reg.test($("#email").val().trim()) == false) {
+               $("#emailError").text("Invalid Email Address");
+               isValid = false;
+             }
+             else {
+               $("#emailError").text("");
+               isValid = true;
+             }
+             if (isValid) {
+               // Submit the form or perform other actions
+               alert("Form submitted successfully!");
+               $("#submitButton").submit();
+             }
+             $("#form input").each(function () {
+               var inputValue = $(this).val();
+               if (inputValue === null || inputValue === "") {
+                 $(`#${$(this).attr("id")}`).focus();
+                 return false; // Break out of the each loop
+               }
+             });
+         
+           });
+           $("#btnLogin").click(function () {
+             var isValid = true;
+         
+             // Email
+             var email = $("#mobileEmail").val();
+             if (email === "") {
+               $("#mobileEmailError").text("Please enter your Mobile/Email.");
+               isValid = false;
+             } else {
+               $("#mobileEmailError").text("");
+             }
+             var email = $("#password").val();
+             if (email === "") {
+               $("#passwordError").text("Please enter your Password.");
+               isValid = false;
+             } else {
+               $("#passwordError").text("");
+             }
+             if (isValid) {
+               // Submit the form or perform other actions
+               alert("Form submitted successfully!");
+               $("#btnLogin").submit();
+         
+             }
+             $("#formLogin input").each(function () {
+               var inputValue = $(this).val();
+               if (inputValue === null || inputValue === "") {
+                 $(`#${$(this).attr("id")}`).focus();
+                 return false; // Break out of the each loop
+               }
+             });
+           });
+         });
+         
+         function RestValue() {
+         
+           $("#incomeCal tr").each(function(){
+             
+             $(this).find('td').eq(4).text('')
+           });
+           $("#totalIncomeDaily").html('');
+           $("#totalIncomeMonthly").html('');
+           $("#totalIncomeYearly").html('');
+           $('#configform')[0].reset();
+           
+         };
+         
+         function isNumber(evt) {
+         evt = (evt) ? evt : window.event;
+         var charCode = (evt.which) ? evt.which : evt.keyCode;
+         if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+             return false;
+         }
+         return true;
+         }
+         
+         
+         
+      </script>
+   </body>
 </html>
